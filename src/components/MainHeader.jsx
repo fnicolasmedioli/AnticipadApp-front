@@ -1,13 +1,11 @@
-import { Search as SearchIcon } from "react-bootstrap-icons";
-
 export const MainHeader = () =>
 {
     return (
-        <>        
+        <>
             <header>
                 <nav className="navbar navbar-expand-md navbar-light bg-light">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#">TicketZone</a>
+                    <a className="navbar-brand" href="#">AnticipadApp</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Menu navegacion">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -33,7 +31,7 @@ export const MainHeader = () =>
                     <form className="d-flex">
                         <input className="form-control me-2" type="search" placeholder="Ingresa tu búsqueda" aria-label="Busqueda" />
                         <button className="btn btn-outline-success" type="submit">
-                            <SearchIcon size={20}/>
+                            Buscar
                         </button>
                     </form>
                     </div>

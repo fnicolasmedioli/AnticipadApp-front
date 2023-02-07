@@ -4,7 +4,7 @@ import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 import "./style/index.css";
 import { MainHeader } from "./components";
 
-const TicketZone = () =>
+const AnticipadApp = () =>
 {
     return (
     <>
@@ -13,4 +13,4 @@ const TicketZone = () =>
     );
 };
 
-export default TicketZone;
+export default AnticipadApp;

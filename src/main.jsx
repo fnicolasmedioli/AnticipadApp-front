@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import TicketZone from "./TicketZone";
+import AnticipadApp from "./AnticipadApp";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <TicketZone />
+    <AnticipadApp />
   </React.StrictMode>,
 );
