@@ -1,0 +1,70 @@
+@import "../node_modules/bootstrap/scss/functions";
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+// 2. Include any default variable overrides here
+
+    $body-bg: #000025;
+    $secondary: #17002f;
+    $hover: #ff0059;
+    $succes: #00d7fb;
+
+    header {
+        box-shadow: 0 -5px 15px 2px grey;
+        position: sticky;
+    }
+
+    @font-face {
+        font-family: "Grand Slang";
+        src: url("../../assets/fonts/grandslang-roman.otf") format("opentype");
+    }
+
+    
+
+    .navbar {
+        background-color: $secondary;
+        color: white;
+        & .nav-link,
+        & .dropdown-item{
+        color: white;
+        font-family: 'Galano Grotesque Alt', sans-serif;
+        font-family: 'Galano Grotesque', sans-serif;
+
+        
+        font-size: 1rem;
+       
+        font-weight: bold;
+        text-align: center;
+        }
+    }
+
+    .navbar-brand {
+        font-size: 2rem;
+        font-family: "Grand Slang";
+        font-weight: bold;
+        color: white;
+    }
+
+    .navbar-nav .nav-link.active {
+        color: white !important;
+        background-color: transparent !important;
+    }
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .dropdown-item:hover {
+        color: $hover;
+    }
+
+    
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+// 4. Include any optional Bootstrap components as you like
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+
+

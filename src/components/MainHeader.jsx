@@ -1,43 +1,75 @@
+import Container from 'react-bootstrap/Container';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+
 export const MainHeader = () =>
 {
     return (
         <>
             <header>
-                <nav className="navbar navbar-expand-md navbar-light bg-light">
-                <div className="container-fluid">
-                    <a className="navbar-brand" href="#">AnticipadApp</a>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Menu navegacion">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse" id="navbarScroll">
-                    <ul className="navbar-nav me-auto my-2 my-md-0 navbar-nav-scroll">
-                        <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="#">Comprar</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#">Quiénes somos</a>
-                        </li>
-                        <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Ayuda
-                            </a>
-                            <ul className="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                                <li><a className="dropdown-item" href="#">Cómo comprar</a></li>
-                                <li><a className="dropdown-item" href="#">Métodos de pago</a></li>
-                                <li><a className="dropdown-item" href="#">Política de reembolso</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <form className="d-flex">
-                        <input className="form-control me-2" type="search" placeholder="Ingresa tu búsqueda" aria-label="Busqueda" />
-                        <button className="btn btn-outline-success" type="submit">
-                            Buscar
-                        </button>
-                    </form>
-                    </div>
-                </div>
-                </nav>
-    
+                <Navbar  
+                    collapseOnSelect 
+                    expand="lg"
+                >
+                    <Navbar.Brand 
+                    href="#home"
+                    >
+                    AnticipadApp
+                    </Navbar.Brand>
+
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="mr-auto">
+                        <Form 
+                            className="d-flex"
+                        >
+                            <Form.Control
+                            type="search"
+                            placeholder="Buscar eventos"
+                            className="me-2"
+                            aria-label="Search"
+                            />
+                            <Button variant="outline-success">Buscar</Button>
+                        </Form>
+                    </Nav>    
+                    <Nav className="ms-auto">
+                    
+                        <Nav.Link href="#about">Quiénes somos</Nav.Link>
+                        
+                        <NavDropdown  
+                            title="Ayuda" 
+                            id="collasible-nav-dropdown" 
+                        >
+                            <NavDropdown.Item href="#action/3.1">
+                                Cómo comprar
+                            </NavDropdown.Item>
+
+                            <NavDropdown.Item href="#action/3.2">
+                                Métodos de pago
+                            </NavDropdown.Item>
+
+                            <NavDropdown.Item href="#action/3.3">
+                                Política de reembolso
+                            </NavDropdown.Item>
+
+                            <NavDropdown.Divider />
+
+                            <NavDropdown.Item href="#action/3.4">
+                                Encuentra tu Ticket
+                            </NavDropdown.Item>
+
+                        </NavDropdown>
+
+                        <Nav.Link href="#create">Crear un evento</Nav.Link>
+                        <Nav.Link href="#login">Iniciar Sesión</Nav.Link>
+                        <Nav.Link href="#register">Registrarse</Nav.Link>
+
+                    </Nav>
+                    </Navbar.Collapse>
+                </Navbar>
             </header>
     
         </>
