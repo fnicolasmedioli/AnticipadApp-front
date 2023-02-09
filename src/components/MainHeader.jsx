@@ -39,7 +39,6 @@ export const MainHeader = () =>
                 <Nav className="ms-auto" bg="dark">
                 
                     <Nav.Link href="#about">Quiénes somos</Nav.Link>
-
                     <Nav.Link href="#create">Crear un evento</Nav.Link>
                     <Nav.Link href="#login">Iniciar Sesión</Nav.Link>
                     <Nav.Link href="#register">Registrarse</Nav.Link>
@@ -56,10 +55,6 @@ export const MainHeader = () =>
 
                         <NavDropdown.Item href="#action/3.2">
                             Métodos de pago
-                        </NavDropdown.Item>
-
-                        <NavDropdown.Item href="#action/3.3">
-                            Política de reembolso
                         </NavDropdown.Item>
 
                         <NavDropdown.Divider />
