@@ -129,12 +129,32 @@ header {
     height: 250px;
     background: $body-bg;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .next-events-banner > * {
     font-size: 3rem;
     color: $hover;
-    font-family: "Grand Slang"; 
+    font-family: "Grand Slang";
+}
+
+.why-anticipadapp {
+    color: white;
+}
+
+.why-anticipadapp .why-anticipadapp-question {
+    font-size: 2rem;
+    display: block;
+}
+
+.why-anticipadapp .why-anticipadapp-response {
+    display: block;
+    margin-top: 1rem;
+}
+
+hr {
+    border: 1px solid white;
+    width: 90%;
 }
