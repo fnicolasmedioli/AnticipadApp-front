@@ -1,58 +1,75 @@
 @import "../node_modules/bootstrap/scss/functions";
-
-
 @import "../node_modules/bootstrap/scss/bootstrap";
-// 2. Include any default variable overrides here
 
-    $body-bg: #000025;
-    $secondary: #17002f;
-    $hover: #ff0059;
-    $succes: #00d7fb;
+$body-bg: #000025;
+$secondary: #17002f;
+$hover: #ff0059;
+$success: #00d7fb;
 
-    header {
-        box-shadow: 0 -5px 15px 2px grey;
-        position: sticky;
-    }
+header {
+    position: sticky;
+    outline: 2px solid $white;
+    background: $secondary;
+}
 
-    @font-face {
-        font-family: "Grand Slang";
-        src: url("../../assets/fonts/grandslang-roman.otf") format("opentype");
-    }
+@font-face {
+    font-family: "Grand Slang";
+    src: url("../../assets/fonts/grandslang-roman.otf") format("opentype");
+}
 
-    
+.dropdown-divider {
+    background-color: $white;
+}
 
-    .navbar {
-        background-color: $secondary;
-        color: white;
-        & .nav-link,
-        & .dropdown-item{
+.collasible-nav-dropdown > * {
+    background-color: $secondary;
+}
+
+.dropdown-menu {
+    outline: 2px solid white;
+    left: auto;
+    right: 0;
+}
+
+.navbar {
+    background-color: $secondary;
+    color: white;
+    & .nav-link,
+    & .dropdown-item,
+    & button {
         color: white;
         font-family: 'Galano Grotesque Alt', sans-serif;
         font-family: 'Galano Grotesque', sans-serif;
-
-        
-        font-size: 1rem;
-       
+        font-size: 1rem;    
         font-weight: bold;
         text-align: center;
-        }
     }
+    button {
+        border-width: 2px;
+    }
+    input:focus {
+        border-color: initial;
+        outline: initial;
+        box-shadow: initial;
+    }
+}
 
-    .navbar-brand {
-        font-size: 2rem;
-        font-family: "Grand Slang";
-        font-weight: bold;
-        color: white;
-    }
+.navbar-brand {
+    font-size: 2rem;
+    font-family: "Grand Slang";
+    font-weight: bold;
+    color: white;
+}
 
-    .navbar-nav .nav-link.active {
-        color: white !important;
-        background-color: transparent !important;
-    }
-    .navbar-nav .nav-link:hover,
-    .navbar-nav .dropdown-item:hover {
-        color: $hover;
-    }
+.navbar-nav .nav-link.active {
+    color: white !important;
+    background-color: transparent !important;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .dropdown-item:hover {
+    color: $hover;
+}
+
 
     
 // 3. Include remainder of required Bootstrap stylesheets

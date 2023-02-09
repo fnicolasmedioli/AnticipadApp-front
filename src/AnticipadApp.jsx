@@ -12,6 +12,9 @@ const AnticipadApp = () =>
     return (
     <>
         <MainHeader />
+        <div class="background-image">    
+            <div className="space"></div>
+        </div>
     </>
     );
 };
