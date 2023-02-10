@@ -16,25 +16,49 @@ $success: #00d7fb;
 body {
     background-color: $body-bg;
 }
+.background-image{
+    font-size: 2rem;
 
+}
+
+.background-image.emoji-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.background-image img {
+    margin: 0 0 0 5px;
+    width: 30px;
+    height: 30px;
+}
 .background-image h1 {
     text-shadow: 0 0 10px black;
     font-family: "Grand Slang";
     font-size: 10vh;
+    
 }
 
 .background-image h2 {
-    font-size: 2rem;
     text-shadow: 0 0 3px black;
+}
+
+.background-image span{
+    display: inline-block;
+    vertical-align: middle;
+    font-family: "Grand Slang";
+    text-align:left!important;
 }
 
 header {
     position: fixed;
-    outline: 2px solid $white;
+    outline: 2px solid #fff;
     background: $secondary;
     width: 100%;
     padding-left: 2rem;
     padding-right: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     z-index: 2;
 }
 
