@@ -21,7 +21,7 @@ body {
     font-size: 2rem;
     background-size: cover;
     background-position: center;
-    background-image: url("../../assets/images/bg-img1.jpg");
+    background-image: url("/assets/images/bg-img1.jpg");
     background-attachment: fixed;
     display: flex;
     justify-content: center;
@@ -102,7 +102,7 @@ header {
 
 @font-face {
     font-family: "Grand Slang";
-    src: url("../../assets/fonts/grandslang-roman.otf") format("opentype");
+    src: url("/assets/fonts/grandslang-roman.otf") format("opentype");
 }
 
 .dropdown-divider {
