@@ -11,6 +11,8 @@ $success: #00d7fb;
 
 * {
     font-family: "Galano Grotesque";
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -46,7 +48,6 @@ body {
     }
 
     & button.btn:hover,
-    & button.btn:active,
     & button.btn:active {
         color: white;
     }
@@ -79,11 +80,11 @@ body {
     display: inline-block;
     vertical-align: middle;
     font-family: "Grand Slang";
-    text-align:left!important;
+    text-align: left !important;
 }
 
 .background-image button {
-    width:fit-content;
+    width: fit-content;
     margin: auto;
 }
 
@@ -92,10 +93,6 @@ header {
     outline: 2px solid #fff;
     background: $secondary;
     width: 100%;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
     z-index: 2;
     top: 0;
 }
@@ -107,7 +104,7 @@ header {
 
 .dropdown-divider {
     background-color: $white;
-    width:100%;
+    width: 100%;
 }
 
 .collasible-nav-dropdown > * {
@@ -120,9 +117,20 @@ header {
     right: 0;
 }
 
+.dropdown-menu.show {
+    margin-bottom: 0.5rem;
+}
+
+.dropdown-item:active,
+.dropdown-item:focus {
+    background: $white;
+    color: $secondary;
+}
+
 .navbar {
     background-color: $secondary;
     color: white;
+
     & .nav-link,
     & .dropdown-item,
     & button {
@@ -156,18 +164,32 @@ header {
 }
 
 .next-events-banner {
-    height: 250px;
     background: $body-bg;
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
-.next-events-banner > * {
+.next-events-banner > .row {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.next-events-banner > .row > * {
     font-size: 3rem;
     color: $hover;
     font-family: "Grand Slang";
+    margin-top: 2rem;
+}
+
+.next-events-banner > .row > hr {
+    border: 1px solid white;
+    width: 100%;
 }
 
 .why-anticipadapp {
@@ -182,9 +204,4 @@ header {
 .why-anticipadapp .why-anticipadapp-response {
     display: block;
     margin-top: 1rem;
-}
-
-hr {
-    border: 1px solid white;
-    width: 90%;
 }
