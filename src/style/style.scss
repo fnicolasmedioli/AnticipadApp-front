@@ -16,30 +16,62 @@ $success: #00d7fb;
 body {
     background-color: $body-bg;
 }
-.background-image{
-    font-size: 2rem;
 
+.background-image {
+    font-size: 2rem;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../../assets/images/bg-img1.jpg");
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    box-shadow: 0px 0px 5px 1px $white;
+    position: relative;
+
+    padding: 10vh 0 10vh 0;
+
+    & button.btn {
+        margin-top: 2rem;
+        color: white;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        font-size: 1.2rem;
+        transition-duration: 0.15s;
+        box-shadow: 0 0 10px 2px grey;
+    }
+
+    & button.btn:hover,
+    & button.btn:active,
+    & button.btn:active {
+        color: white;
+    }
 }
 
 .background-image.emoji-container {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
+
 .background-image img {
     margin: 0 0 0 5px;
     width: 30px;
     height: 30px;
 }
+
 .background-image h1 {
     text-shadow: 0 0 10px black;
     font-family: "Grand Slang";
-    font-size: 10vh;
-    
+    font-size: 3.5rem;
 }
 
 .background-image h2 {
+    margin-top: 2rem;
     text-shadow: 0 0 3px black;
 }
 
@@ -50,8 +82,13 @@ body {
     text-align:left!important;
 }
 
+.background-image button {
+    width:fit-content;
+    margin: auto;
+}
+
 header {
-    position: fixed;
+    position: sticky;
     outline: 2px solid #fff;
     background: $secondary;
     width: 100%;
@@ -60,6 +97,7 @@ header {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     z-index: 2;
+    top: 0;
 }
 
 @font-face {
@@ -69,6 +107,7 @@ header {
 
 .dropdown-divider {
     background-color: $white;
+    width:100%;
 }
 
 .collasible-nav-dropdown > * {
@@ -114,39 +153,6 @@ header {
 .navbar-nav .nav-link:hover,
 .navbar-nav .dropdown-item:hover {
     color: $hover;
-}
-
-.background-image {
-    background-size: cover;
-    background-position: center;
-    background-image: url("../../assets/images/bg-img1.jpg");
-    background-attachment: fixed;
-    height: 700px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    box-shadow: 0px 0px 5px 1px $white;
-    position: relative;
-
-    & button.btn {
-        margin-top: 2rem;
-        color: white;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-        font-size: 1.2rem;
-        transition-duration: 0.15s;
-        box-shadow: 0 0 10px 2px grey;
-    }
-
-    & button.btn:hover,
-    & button.btn:active,
-    & button.btn:active {
-        color: white;
-    }
 }
 
 .next-events-banner {
