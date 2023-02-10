@@ -14,7 +14,7 @@ export const MainHeader = () =>
                 collapseOnSelect 
                 expand="lg"
                 variant="dark"
-                className="px-sm-3 px-xxl-5"
+                className="px-sm-3 px-xxl-5 py-3"
             >
                 <Navbar.Brand 
                     href="#home"
