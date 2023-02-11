@@ -1,6 +1,5 @@
 import { AppBenefitsList } from "./";
 
-
 export const WhyAnticipadApp = () =>
 {
 

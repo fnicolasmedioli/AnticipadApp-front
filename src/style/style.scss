@@ -206,12 +206,36 @@ header {
     margin-top: 1rem;
 }
 
-.next-events-text span {
-    
+.next-events-text span:first-child {
     text-shadow: 0 0 3px rgba(255, 255, 255, 0.7);
 }
 
 .location-text {
     color: white;
     text-shadow: 0 0 4px white;
+}
+
+.app-benefits-item {
+    outline: 1px dashed black;
+    background: $hover;
+    margin-top: 10px;
+    border-radius: 15px;
+}
+
+.benefit-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-size: 100%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.app-benefits-item-title {
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+
+.app-benefits-item-text {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
 }
