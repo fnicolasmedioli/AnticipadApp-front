@@ -1,3 +1,4 @@
+import { AppBenefitsList } from "./";
 
 
 export const WhyAnticipadApp = () =>
@@ -14,21 +15,11 @@ export const WhyAnticipadApp = () =>
                         <span className="why-anticipadapp-question">¿Por qué AnticipadApp?</span>
 
                         <span className="why-anticipadapp-response">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi perferendis odit sit officia doloribus impedit tempora eligendi, incidunt possimus debitis asperiores nobis voluptatum, temporibus itaque consequatur alias vitae non unde.
+                            ¡AnticipadApp es la mejor forma de comprar entradas online! Con nuestra app, podés disfrutar de los siguientes beneficios:
                         </span>
                     </div>
                     <div className="col-12 col-sm-6 px-5">
-                        <ul>
-                            <li>
-                                Fácil
-                            </li>
-                            <li>
-                                Online
-                            </li>
-                            <li>
-                                Descuentos exclusivos
-                            </li>
-                        </ul>
+                        <AppBenefitsList />
                     </div>
                 </div>
             </div>
