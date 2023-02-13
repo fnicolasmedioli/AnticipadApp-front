@@ -4,7 +4,7 @@ import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 
 import "./global/style/global-style.scss";
 import "./auth/style/auth-style.scss";
-import { MainRouter } from "./global/router";
+import { MainRouter } from "./global/Router";
 
 const AnticipadApp = () =>
 {
