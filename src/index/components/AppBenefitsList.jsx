@@ -1,5 +1,5 @@
 
-import { AppBenefitsItem } from "./";
+import { AppBenefitsItem } from ".";
 
 export const AppBenefitsList = () =>
 {

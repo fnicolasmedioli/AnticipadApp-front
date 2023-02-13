@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 
 import axios from "axios";
 
-
 export const NextEventsBanner = () =>
 {
     let [city, setCity] = useState(null);

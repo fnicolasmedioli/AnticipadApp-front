@@ -1,20 +1,13 @@
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
+import { IndexPage } from "./index/pages/IndexPage";
 
-import { MainHeader, MainImage, NextEventsBanner, WhyAnticipadApp } from "./components";
-import "./style/style.scss";
-
-
+import "./global/style/global-style.scss";
 
 const AnticipadApp = () =>
 {
     return (
-    <>
-        <MainHeader />
-        <MainImage />
-        <NextEventsBanner />
-        <WhyAnticipadApp />
-    </>
+        <IndexPage />
     );
 };
 

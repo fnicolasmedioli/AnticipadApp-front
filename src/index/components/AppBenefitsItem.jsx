@@ -1,5 +1,3 @@
-
-
 export const AppBenefitsItem = ({title, text, icon}) =>
 {
     return (
@@ -14,7 +12,6 @@ export const AppBenefitsItem = ({title, text, icon}) =>
                     <i className="app-benefits-item-text">{text}</i>
                 </div>
             </div>
-
         </div>
     );
 };

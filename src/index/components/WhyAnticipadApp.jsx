@@ -1,8 +1,7 @@
-import { AppBenefitsList } from "./";
+import { AppBenefitsList } from ".";
 
 export const WhyAnticipadApp = () =>
 {
-
     return (
 
         <section>
