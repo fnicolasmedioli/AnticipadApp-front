@@ -1,13 +1,17 @@
+import { BrowserRouter } from "react-router-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
-import { IndexPage } from "./index/pages/IndexPage";
 
 import "./global/style/global-style.scss";
+import "./auth/style/auth-style.scss";
+import { MainRouter } from "./global/router";
 
 const AnticipadApp = () =>
 {
     return (
-        <IndexPage />
+        <BrowserRouter>
+            <MainRouter />
+        </BrowserRouter>
     );
 };
 

@@ -4,70 +4,72 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Link as RouterLink, Route } from 'react-router-dom';
 
 export const GlobalHeader = () =>
 {
     return (
         <header>
             <Container fluid>
-            <Navbar  
-                collapseOnSelect 
-                expand="lg"
-                variant="dark"
-                className="px-sm-3 px-xxl-5 py-3"
-            >
-                <Navbar.Brand 
-                    href="#home"
+                <Navbar  
+                    collapseOnSelect 
+                    expand="lg"
+                    variant="dark"
+                    className="px-sm-3 px-xxl-5 py-3"
                 >
-                    AnticipadApp
-                </Navbar.Brand>
-
-                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                <Navbar.Collapse id="responsive-navbar-nav">
-                <Nav className="mr-auto">
-                    <Form 
-                        className="d-flex"
+                    <Navbar.Brand 
+                        href="#home"
                     >
-                        <Form.Control
-                        type="search"
-                        placeholder="Buscar eventos"
-                        className="me-2"
-                        aria-label="Search"
-                        />
-                        <Button className="navbar-search-button" variant="outline-light">Buscar</Button>
-                    </Form>
-                </Nav>    
-                <Nav className="ms-auto" bg="dark">
-                
-                    <Nav.Link href="#about">Quiénes somos</Nav.Link>
-                    <Nav.Link href="#create">Crear un evento</Nav.Link>
-                    <Nav.Link href="#login">Iniciar Sesión</Nav.Link>
-                    <Nav.Link href="#register">Registrarse</Nav.Link>
+                        AnticipadApp
+                    </Navbar.Brand>
 
-                    <NavDropdown
-                        title="Ayuda"
-                        bg="dark"
-                        className="collasible-nav-dropdown"
-                        drop="down-start"
-                    >
-                        <NavDropdown.Item href="#action/3.1" >
-                            Cómo comprar
-                        </NavDropdown.Item>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse id="responsive-navbar-nav">
+                        <Nav className="mr-auto">
+                            <Form 
+                                className="d-flex"
+                            >
+                                <Form.Control
+                                    type="search"
+                                    placeholder="Buscar eventos"
+                                    className="me-2"
+                                    aria-label="Search"
+                                />
+                                <Button className="navbar-search-button" variant="outline-light">Buscar</Button>
+                            </Form>
+                        </Nav>    
+                        <Nav className="ms-auto" bg="dark">
+                        
+                            <RouterLink to="/about" className="nav-link">Quiénes somos</RouterLink>
+                            <RouterLink to="/create" className="nav-link">Crear un evento</RouterLink>
+                            <RouterLink to="/login" className="nav-link">Iniciar Sesión</RouterLink>
+                            <RouterLink to="/signup" className="nav-link">Registrarse</RouterLink>
 
-                        <NavDropdown.Item href="#action/3.2">
-                            Métodos de pago
-                        </NavDropdown.Item>
+                            <NavDropdown
+                                title="Ayuda"
+                                bg="dark"
+                                className="collasible-nav-dropdown"
+                                drop="down-start"
+                            >
+                                <RouterLink to="/como-comprar" className="dropdown-item" data-rr-ui-dropdown-item>
+                                    Cómo comprar
+                                </RouterLink>
 
-                        <NavDropdown.Divider />
+                                <RouterLink to="/metodos-pago" className="dropdown-item" data-rr-ui-dropdown-item>
+                                    Métodos de pago
+                                </RouterLink>
 
-                        <NavDropdown.Item href="#action/3.4">
-                            Encuentra tu Ticket
-                        </NavDropdown.Item>
-                    </NavDropdown>
+                                <NavDropdown.Divider />
 
-                </Nav>
-                </Navbar.Collapse>
-            </Navbar>
+                                <RouterLink to="/encuentra-ticket" className="dropdown-item" data-rr-ui-dropdown-item>
+                                    Encuentra tu Ticket
+                                </RouterLink>
+
+                            </NavDropdown>
+
+                        </Nav>
+                    </Navbar.Collapse>
+                </Navbar>
             </Container>
         </header>
     );
