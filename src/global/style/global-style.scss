@@ -35,6 +35,9 @@ body {
 
     padding: 10vh 0 10vh 0;
 
+    box-sizing: border-box;
+    min-height: 80vh;
+
     & button.btn {
         margin-top: 2rem;
         color: white;
