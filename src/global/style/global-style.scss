@@ -10,266 +10,365 @@ $success: #00d7fb;
 @import "../node_modules/bootstrap/scss/mixins";
 
 * {
-    font-family: "Galano Grotesque";
-    margin: 0;
-    padding: 0;
-    color: white;
+  font-family: "Galano Grotesque";
+  margin: 0;
+  padding: 0;
+  color: white;
 }
 
 label {
-    color: grey;
+  color: grey;
 }
 
 body {
-    background-color: $body-bg;
+  background-color: $body-bg;
 }
 
 .background-image {
-    font-size: 2rem;
-    background-size: cover;
-    background-position: center;
-    background-image: url("/assets/images/bg-img1.jpg");
-    background-attachment: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  font-size: 2rem;
+  background-size: cover;
+  background-position: center;
+  background-image: url("/assets/images/bg-img1.jpg");
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  box-shadow: 0px 0px 5px 1px $white;
+  position: relative;
+
+  padding: 10vh 0 10vh 0;
+
+  box-sizing: border-box;
+  min-height: 80vh;
+
+  & button.btn {
+    margin-top: 2rem;
     color: white;
-    box-shadow: 0px 0px 5px 1px $white;
-    position: relative;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.2rem;
+    transition-duration: 0.15s;
+    box-shadow: 0 0 10px 2px grey;
+  }
 
-    padding: 10vh 0 10vh 0;
-
-    box-sizing: border-box;
-    min-height: 80vh;
-
-    & button.btn {
-        margin-top: 2rem;
-        color: white;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-        font-size: 1.2rem;
-        transition-duration: 0.15s;
-        box-shadow: 0 0 10px 2px grey;
-    }
-
-    & button.btn:hover,
-    & button.btn:active {
-        color: white;
-    }
+  & button.btn:hover,
+  & button.btn:active {
+    color: white;
+  }
 }
 
 .background-image.emoji-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .background-image img {
-    margin: 0 0 0 5px;
-    width: 30px;
-    height: 30px;
+  margin: 0 0 0 5px;
+  width: 30px;
+  height: 30px;
 }
 
 .background-image h1 {
-    text-shadow: 0 0 10px black;
-    font-family: "Grand Slang";
-    font-size: 3.5rem;
+  text-shadow: 0 0 10px black;
+  font-family: "Grand Slang";
+  font-size: 3.5rem;
 }
 
 .background-image h2 {
-    margin-top: 2rem;
-    text-shadow: 0 0 3px black;
+  margin-top: 2rem;
+  text-shadow: 0 0 3px black;
 }
 
 .background-image span {
-    display: inline-block;
-    vertical-align: middle;
-    font-family: "Grand Slang";
-    text-align: left !important;
+  display: inline-block;
+  vertical-align: middle;
+  font-family: "Grand Slang";
+  text-align: left !important;
 }
 
 .background-image button {
-    width: fit-content;
-    margin: auto;
+  width: fit-content;
+  margin: auto;
 }
 
 header {
-    position: sticky;
-    outline: 2px solid #fff;
-    background: $secondary;
-    width: 100%;
-    z-index: 2;
-    top: 0;
+  position: sticky;
+  outline: 2px solid #fff;
+  background: $secondary;
+  width: 100%;
+  z-index: 2;
+  top: 0;
 }
 
 @font-face {
-    font-family: "Grand Slang";
-    src: url("/assets/fonts/grandslang-roman.otf") format("opentype");
+  font-family: "Grand Slang";
+  src: url("/assets/fonts/grandslang-roman.otf") format("opentype");
 }
 
 .dropdown-divider {
-    background-color: $white;
-    width: 100%;
+  background-color: $white;
+  width: 100%;
 }
 
 .collasible-nav-dropdown > * {
-    background-color: $secondary;
+  background-color: $secondary;
 }
 
 .dropdown-menu {
-    outline: 2px solid white;
-    left: auto;
-    right: 0;
+  outline: 2px solid white;
+  left: auto;
+  right: 0;
 }
 
 .dropdown-menu.show {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .dropdown-item:active,
 .dropdown-item:focus {
-    background: $white;
-    color: $secondary;
+  background: $white;
+  color: $secondary;
 }
 
 .navbar {
-    background-color: $secondary;
-    color: white;
+  background-color: $secondary;
+  color: white;
 
-    & .nav-link,
-    & .dropdown-item,
-    & button {
-        color: white;
-        font-family: 'Galano Grotesque Alt', sans-serif;
-        font-family: 'Galano Grotesque', sans-serif;
-        font-size: 1rem;    
-        font-weight: bold;
-        text-align: center;
-    }
-    button {
-        border-width: 2px;
-    }
-    input:focus {
-        border-color: initial;
-        outline: initial;
-        box-shadow: initial;
-    }
+  & .nav-link,
+  & .dropdown-item,
+  & button {
+    color: white;
+    font-family: "Galano Grotesque Alt", sans-serif;
+    font-family: "Galano Grotesque", sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  button {
+    border-width: 2px;
+  }
+  input:focus {
+    border-color: initial;
+    outline: initial;
+    box-shadow: initial;
+  }
 }
 
 .navbar-brand {
-    font-size: 2rem;
-    font-family: "Grand Slang";
-    font-weight: bold;
-    color: white;
-    cursor: pointer;
+  font-size: 2rem;
+  font-family: "Grand Slang";
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
 }
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .dropdown-item:hover {
-    color: $hover;
+  color: $hover;
 }
 
 .next-events-banner {
-    background: $body-bg;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background: $body-bg;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .next-events-banner > .row {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .next-events-banner > .row > * {
-    font-size: 3rem;
-    color: $hover;
-    font-family: "Grand Slang";
-    margin-top: 2rem;
+  font-size: 3rem;
+  color: $hover;
+  font-family: "Grand Slang";
+  margin-top: 2rem;
 }
 
 .next-events-banner > .row > hr {
-    border: 1px solid white;
-    width: 100%;
+  border: 1px solid white;
+  width: 100%;
 }
 
 .why-anticipadapp {
-    color: white;
+  color: white;
 }
 
 .why-anticipadapp .why-anticipadapp-question {
-    font-size: 2rem;
-    display: block;
+  font-size: 2rem;
+  display: block;
 }
 
 .why-anticipadapp .why-anticipadapp-response {
-    display: block;
-    margin-top: 1rem;
+  display: block;
+  margin-top: 1rem;
 }
 
 .next-events-text span {
-    font-family: "Grand Slang";
-    display: block;
-    //text-shadow: 0 0 3px rgba(255, 255, 255, 0.7);
+  font-family: "Grand Slang";
+  display: block;
+  //text-shadow: 0 0 3px rgba(255, 255, 255, 0.7);
 }
 
 .location-text {
-    color: white;
-    text-shadow: 0 0 2.8px white;
+  color: white;
+  text-shadow: 0 0 2.8px white;
 }
 
 .app-benefits-item {
-    outline: 1px dashed black;
-    background: $hover;
-    margin-top: 10px;
-    border-radius: 15px;
+  outline: 1px dashed black;
+  background: $hover;
+  margin-top: 10px;
+  border-radius: 15px;
+  position: relative;
+  transition-duration: 0.1s;
 }
 
 .benefit-icon {
-    width: 3.5rem;
-    height: 3.5rem;
-    background-size: 100%;
-    margin-left: 1rem;
-    margin-right: 1rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-size: 100%;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .app-benefits-item-title {
-    font-size: 1.5rem;
-    text-decoration: underline;
+  font-size: 1.5rem;
+  text-decoration: underline;
 }
 
 .app-benefits-item-text {
-    margin-top: 0.5rem;
-    font-size: 0.85rem;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
 }
 
 .error-404-text {
-    color: white;
+  color: white;
 }
 
 ::-webkit-scrollbar {
-    width: 8px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: $secondary;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: $hover;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: $hover;
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $secondary;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $hover;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $hover;
+}
+
+.view {
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  box-shadow: 0 1px 5px #e6e6e6;
+  cursor: default;
+  width: 210px;
+  height: 210px;
+  margin: 10px;
+  color: #fff;
+}
+.view figure {
+  margin: 0;
+}
+.view figure a {
+  color: #fff;
+}
+.view .mask {
+  background-color: rgba(28, 28, 28, 0.7);
+}
+.view .mask,
+.view .content {
+  width: 100%;
+  left: 0;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+}
+.view img {
+  display: block;
+  position: relative;
+  width: 210px;
+  height: 210px;
+}
+.view h2 {
+  text-align: center;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0 0 0;
+  background: $hover;
+  font-size: 18px;
+  font-weight: bold;
+}
+.view p {
+  position: relative;
+  text-align: center;
+  font-weight: bold;
+}
+.view-first img {
+  transition: all 0.2s linear;
+}
+.view-first .mask {
+  filter: alpha(opacity=0);
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+.view-first h2 {
+  transform: translateY(-100px);
+  filter: alpha(opacity=0);
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+.view-first p {
+  transform: translateY(100px);
+  filter: alpha(opacity=0);
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+.view-first:hover img {
+  transform: scale(1.1, 1.1);
+}
+.view-first a.info {
+  filter: alpha(opacity=0);
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+.view-first:hover .mask {
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
+.view-first:hover h2,
+.view-first:hover p,
+.view-first:hover a.info {
+  filter: alpha(opacity=100);
+  opacity: 1;
+  transform: translateY(0px);
+}
+.view-first:hover p {
+  transition-delay: 0.1s;
+}
+.view-first:hover a.info {
+  transition-delay: 0.2s;
 }

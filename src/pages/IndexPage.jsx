@@ -10,6 +10,21 @@ export const IndexPage = () =>
             <GlobalHeader />
             <MainImage />
             <NextEventsBanner />
+
+            <div className="view view-first">
+                <figure>
+                    <a href="#">
+                        <img src="#" alt="" />
+                        <figcaption className="mask">
+                            <h2>Tets</h2>
+                            <p>Jeje</p>
+                            <p>Juju</p>
+                            <p className="btn btn-info">Comprar</p>
+                        </figcaption>
+                    </a>
+                </figure>
+            </div>
+
             <WhyAnticipadApp />
         </>
     );
