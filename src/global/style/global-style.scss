@@ -13,6 +13,11 @@ $success: #00d7fb;
     font-family: "Galano Grotesque";
     margin: 0;
     padding: 0;
+    color: white;
+}
+
+label {
+    color: grey;
 }
 
 body {
@@ -159,6 +164,7 @@ header {
     font-family: "Grand Slang";
     font-weight: bold;
     color: white;
+    cursor: pointer;
 }
 
 .navbar-nav .nav-link:hover,
@@ -247,4 +253,23 @@ header {
 
 .error-404-text {
     color: white;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: $secondary;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $hover;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $hover;
 }

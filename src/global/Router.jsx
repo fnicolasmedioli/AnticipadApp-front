@@ -1,8 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 
-import { IndexPage } from "../index/pages/IndexPage";
-import { LoginPage } from "../auth/pages/LoginPage";
-import { Error404 } from "./pages/Error404";
+import { IndexPage, LoginPage, Error404, FAQPage, HowToBuyPage, PaymentMethodsPage, FindTicketPage } from "../pages";
 
 export const MainRouter = () =>
 {
@@ -10,6 +8,10 @@ export const MainRouter = () =>
         <Routes>
             <Route path="/" element={<IndexPage />} />
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/preguntas-frecuentes" element={<FAQPage /> } />
+            <Route path="/como-comprar" element={<HowToBuyPage /> } />
+            <Route path="/metodos-de-pago" element={<PaymentMethodsPage /> } />
+            <Route path="/encuentra-tu-ticket" element={<FindTicketPage /> } />
             <Route path="/*" element={<Error404 />} />
         </Routes>
     );

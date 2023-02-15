@@ -1,10 +1,10 @@
-import Container from 'react-bootstrap/Container';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import { Link as RouterLink, Route } from 'react-router-dom';
+import Container from "react-bootstrap/Container";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import { Link as RouterLink, Route } from "react-router-dom";
 
 export const GlobalHeader = () =>
 {
@@ -17,9 +17,7 @@ export const GlobalHeader = () =>
                     variant="dark"
                     className="px-sm-3 px-xxl-5 py-3"
                 >
-                    <Navbar.Brand 
-                        href="#home"
-                    >
+                    <Navbar.Brand>
                         AnticipadApp
                     </Navbar.Brand>
 
@@ -59,13 +57,13 @@ export const GlobalHeader = () =>
                                     Cómo comprar
                                 </RouterLink>
 
-                                <RouterLink to="/metodos-pago" className="dropdown-item" data-rr-ui-dropdown-item>
+                                <RouterLink to="/metodos-de-pago" className="dropdown-item" data-rr-ui-dropdown-item>
                                     Métodos de pago
                                 </RouterLink>
 
                                 <NavDropdown.Divider />
 
-                                <RouterLink to="/encuentra-ticket" className="dropdown-item" data-rr-ui-dropdown-item>
+                                <RouterLink to="/encuentra-tu-ticket" className="dropdown-item" data-rr-ui-dropdown-item>
                                     Encuentra tu Ticket
                                 </RouterLink>
 

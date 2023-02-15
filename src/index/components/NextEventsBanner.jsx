@@ -30,8 +30,7 @@ export const NextEventsBanner = () =>
         })
         .catch(console.error);
 
-    }, [])
-
+    }, []);
 
     return (
         <section id="next-events-section">
@@ -41,7 +40,7 @@ export const NextEventsBanner = () =>
                         <span>Próximos eventos:</span>
                         <i className="location-text">
                             { (locationText) ? (" " + locationText) : null }
-                        </i>    
+                        </i>
                     </h2>
                     <h4>...</h4>
                     <hr />
