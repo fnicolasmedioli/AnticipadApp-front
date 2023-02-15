@@ -40,7 +40,6 @@ export const GlobalHeader = () =>
                         </Nav>    
                         <Nav className="ms-auto" bg="dark">
                         
-                            <RouterLink to="/about" className="nav-link">Quiénes somos</RouterLink>
                             <RouterLink to="/create" className="nav-link">Crear un evento</RouterLink>
                             <RouterLink to="/login" className="nav-link">Iniciar Sesión</RouterLink>
                             <RouterLink to="/signup" className="nav-link">Registrarse</RouterLink>
@@ -51,6 +50,11 @@ export const GlobalHeader = () =>
                                 className="collasible-nav-dropdown"
                                 drop="down-start"
                             >
+
+                                <RouterLink to="/preguntas-frecuentes" className="dropdown-item" data-rr-ui-dropdown-item>
+                                    Preguntas frecuentes
+                                </RouterLink>
+
                                 <RouterLink to="/como-comprar" className="dropdown-item" data-rr-ui-dropdown-item>
                                     Cómo comprar
                                 </RouterLink>
