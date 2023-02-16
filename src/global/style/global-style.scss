@@ -9,163 +9,173 @@ $success: #00d7fb;
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
 
+/*
+.animate__animated.animate__rubberBand {
+  --animate-duration: 1s;
+}
+*/
+
 * {
-    font-family: "Galano Grotesque";
-    margin: 0;
-    padding: 0;
+  font-family: "Galano Grotesque";
+  margin: 0;
+  padding: 0;
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
-    background-color: $body-bg;
+  background-color: $body-bg;
 }
 
 .background-image {
-    font-size: 2rem;
-    background-size: cover;
-    background-position: center;
-    background-image: url("/assets/images/bg-img1.jpg");
-    background-attachment: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  font-size: 2rem;
+  background-size: cover;
+  background-position: center;
+  background-image: url("/assets/images/bg-img1.jpg");
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  box-shadow: 0px 0px 5px 1px $white;
+  position: relative;
+  padding: 10vh 0 10vh 0;
+  box-sizing: border-box;
+  min-height: 80vh;
+
+  & button.btn {
+    margin-top: 2rem;
     color: white;
-    box-shadow: 0px 0px 5px 1px $white;
-    position: relative;
-    padding: 10vh 0 10vh 0;
-    box-sizing: border-box;
-    min-height: 80vh;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.2rem;
+    transition-duration: 0.15s;
+    box-shadow: 0 0 10px 2px grey;
+  }
 
-    & button.btn {
-        margin-top: 2rem;
-        color: white;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-        font-size: 1.2rem;
-        transition-duration: 0.15s;
-        box-shadow: 0 0 10px 2px grey;
-    }
-
-    & button.btn:hover,
-    & button.btn:active {
-        color: white;
-    }
+  & button.btn:hover,
+  & button.btn:active {
+    color: white;
+  }
 }
 
 .background-image.emoji-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .background-image img {
-    margin: 0 0 0 5px;
-    width: 30px;
-    height: 30px;
+  margin: 0 0 0 5px;
+  width: 30px;
+  height: 30px;
 }
 
 .background-image h1 {
-    text-shadow: 0 0 10px black;
-    font-family: "Grand Slang";
-    font-size: 3.5rem;
+  text-shadow: 0 0 10px black;
+  font-family: "Grand Slang";
+  font-size: 3.5rem;
 }
 
 .background-image h2 {
-    margin-top: 2rem;
-    text-shadow: 0 0 3px black;
+  margin-top: 2rem;
+  text-shadow: 0 0 3px black;
 }
 
 .background-image span {
-    display: inline-block;
-    vertical-align: middle;
-    font-family: "Grand Slang";
-    text-align: left !important;
+  display: inline-block;
+  vertical-align: middle;
+  font-family: "Grand Slang";
+  text-align: left !important;
 }
 
 .background-image button {
-    width: fit-content;
-    margin: auto;
+  width: fit-content;
+  margin: auto;
 }
 
 header {
-    position: sticky;
-    outline: 2px solid #fff;
-    background: $secondary;
-    width: 100%;
-    z-index: 2;
-    top: 0;
+  position: sticky;
+  outline: 2px solid #fff;
+  background: $secondary;
+  width: 100%;
+  z-index: 2;
+  top: 0;
 }
 
 @font-face {
-    font-family: "Grand Slang";
-    src: url("/assets/fonts/grandslang-roman.otf") format("opentype");
+  font-family: "Grand Slang";
+  src: url("/assets/fonts/grandslang-roman.otf") format("opentype");
 }
 
 .dropdown-divider {
-    background-color: $white;
-    width: 100%;
+  background-color: $white;
+  width: 100%;
 }
 
 .collasible-nav-dropdown > * {
-    background-color: $secondary;
+  background-color: $secondary;
 }
 
 .dropdown-menu {
-    outline: 2px solid white;
-    left: auto;
-    right: 0;
+  outline: 2px solid white;
+  left: auto;
+  right: 0;
 }
 
 .dropdown-menu.show {
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .dropdown-item:active,
 .dropdown-item:focus {
-    background: $white;
-    color: $secondary;
+  background: $white;
+  color: $secondary;
 }
 
 .navbar {
-    background-color: $secondary;
-    color: white;
+  background-color: $secondary;
+  color: white;
 
-    & .nav-link,
-    & .dropdown-item,
-    & button {
-        color: white;
-        font-family: 'Galano Grotesque Alt', sans-serif;
-        font-family: 'Galano Grotesque', sans-serif;
-        font-size: 1rem;    
-        font-weight: bold;
-        text-align: center;
-    }
-    button {
-        border-width: 2px;
-    }
-    input:focus {
-        border-color: initial;
-        outline: initial;
-        box-shadow: initial;
-    }
+  & .nav-link,
+  & .dropdown-item,
+  & button {
+    color: white;
+    font-family: "Galano Grotesque Alt", sans-serif;
+    font-family: "Galano Grotesque", sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  button {
+    border-width: 2px;
+  }
+  input {
+    box-sizing: border-box;
+    transition-duration: 0.2s;
+  }
+  input:focus, input:active {
+    outline: none;
+    box-shadow: 0 0 2px 2px white;
+  }
 }
 
 .navbar-brand {
-    font-size: 2rem;
-    font-family: "Grand Slang";
-    font-weight: bold;
-    color: white;
+  font-size: 2rem;
+  font-family: "Grand Slang";
+  font-weight: bold;
+  color: white;
 }
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .dropdown-item:hover {
-    color: $hover;
+  color: $hover;
 }
 
 // .next-events-banner {
@@ -192,12 +202,9 @@ header {
 //     margin-top: 2rem;
 // }
 
-
 .next-events-text span {
-  
   font-family: "Grand Slang";
   color: $hover;
-  //text-shadow: 0 0 3px rgba(255, 255, 255, 0.7);
 }
 
 .location-text {
@@ -206,47 +213,46 @@ header {
 }
 
 .why-anticipadapp {
-    color: white;
+  color: white;
 }
 
 .why-anticipadapp .why-anticipadapp-question {
-    font-size: 2rem;
-    display: block;
+  font-size: 2rem;
+  display: block;
 }
 
 .why-anticipadapp .why-anticipadapp-response {
-    display: block;
-    margin-top: 1rem;
+  display: block;
+  margin-top: 1rem;
 }
 .app-benefits-item {
-    outline: 1px dashed black;
-    background: $hover;
-    margin-top: 10px;
-    border-radius: 15px;
+  outline: 1px dashed black;
+  background: $hover;
+  margin-top: 10px;
+  border-radius: 15px;
 }
 
 .benefit-icon {
-    width: 3.5rem;
-    height: 3.5rem;
-    background-size: 100%;
-    margin-left: 1rem;
-    margin-right: 1rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-size: 100%;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .app-benefits-item-title {
-    font-size: 1.5rem;
-    text-decoration: underline;
+  font-size: 1.5rem;
+  text-decoration: underline;
 }
 
 .app-benefits-item-text {
-    margin-top: 0.5rem;
-    font-size: 0.85rem;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
 }
 
 .error-404-text {
-    color: white;
+  color: white;
 }
-
 
 ::-webkit-scrollbar {
   width: 0.7rem;
@@ -341,7 +347,7 @@ header {
 }
 
 .slider-controler .slider-arrow::after {
-  content: '';
+  content: "";
 }
 
 /*

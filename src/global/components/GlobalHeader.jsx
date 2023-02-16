@@ -6,6 +6,19 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link as RouterLink, NavLink } from "react-router-dom";
 
+function animateOnClick(e, animationName)
+{
+    const animatedItemClass = "animate__animated";
+
+    e.target.classList.add(animatedItemClass, animationName);
+
+    function handleAnimationEnd(event) {
+        event.stopPropagation();
+        e.target.classList.remove(animatedItemClass, animationName);
+    }
+  
+    e.target.addEventListener('animationend', handleAnimationEnd, {once: true});
+}
 
 function activeToggler({isActive}) {
     return (isActive) ? " nav-link-active" : "";
@@ -35,8 +48,15 @@ export const GlobalHeader = () =>
                                     placeholder="Buscar eventos"
                                     className="me-2"
                                     aria-label="Search"
+                                    /*
+                                    onClick={e => {
+                                        animateInput(e, "animate__rubberBand")
+                                    }}
+                                    */
                                 />
-                                <Button className="navbar-search-button" variant="outline-light">Buscar</Button>
+                                <Button className="navbar-search-button" variant="outline-light" onClick={e => {
+                                    animateOnClick(e, "animate__rubberBand")
+                                }}>Buscar</Button>
                             </Form>
                         </Nav>    
                         <Nav className="ms-auto" bg="dark">
