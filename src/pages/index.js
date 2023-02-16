@@ -5,3 +5,4 @@ export * from "./IndexPage";
 export * from "./HowToBuyPage";
 export * from "./PaymentMethodsPage";
 export * from "./FindTicketPage";
+export * from "./SignupPage";

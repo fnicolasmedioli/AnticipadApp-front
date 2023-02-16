@@ -1,11 +1,13 @@
 import { GlobalHeader } from "../global/components";
 
-export const HowToBuyPage = () =>
+export const SignupPage = () =>
 {
     return (
     <>
         <GlobalHeader />
-        <p>Como comprar</p>
+        <h4 style={{
+            color: "white"
+        }}>Signup box</h4>
     </>
     );
 };

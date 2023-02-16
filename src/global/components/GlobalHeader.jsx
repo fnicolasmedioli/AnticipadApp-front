@@ -17,9 +17,7 @@ export const GlobalHeader = () =>
                     variant="dark"
                     className="px-sm-3 px-xxl-5 py-3"
                 >
-                    <Navbar.Brand>
-                        AnticipadApp
-                    </Navbar.Brand>
+                    <RouterLink to="/" className="navbar-brand">AnticipadApp</RouterLink>
 
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">

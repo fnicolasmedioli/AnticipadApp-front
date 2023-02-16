@@ -456,3 +456,14 @@ header {
 .view-first:hover a.info {
   transition-delay: 0.2s;
 }
+
+.accordion-button:active,
+.accordion-button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.accordion {
+  border-radius: 1rem;
+  overflow: hidden;
+}
