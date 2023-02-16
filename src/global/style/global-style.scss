@@ -467,3 +467,9 @@ header {
   border-radius: 1rem;
   overflow: hidden;
 }
+
+.nav-link-active {
+  color: $hover !important;
+  cursor: default;
+  opacity: 75%;
+}

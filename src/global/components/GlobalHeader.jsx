@@ -4,7 +4,12 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import { Link as RouterLink, Route } from "react-router-dom";
+import { Link as RouterLink, NavLink } from "react-router-dom";
+
+
+function activeToggler({isActive}) {
+    return (isActive) ? " nav-link-active" : "";
+}
 
 export const GlobalHeader = () =>
 {
@@ -35,10 +40,10 @@ export const GlobalHeader = () =>
                             </Form>
                         </Nav>    
                         <Nav className="ms-auto" bg="dark">
-                        
-                            <RouterLink to="/create" className="nav-link">Crear un evento</RouterLink>
-                            <RouterLink to="/login" className="nav-link">Iniciar Sesión</RouterLink>
-                            <RouterLink to="/signup" className="nav-link">Registrarse</RouterLink>
+
+                            <NavLink to="/create" className={p => "nav-link"+activeToggler(p)}>Crear un evento</NavLink>
+                            <NavLink to="/login" className={p => "nav-link"+activeToggler(p)}>Iniciar Sesión</NavLink>
+                            <NavLink to="/signup" className={p => "nav-link"+activeToggler(p)}>Registrarse</NavLink>
 
                             <NavDropdown
                                 title="Ayuda"
@@ -47,23 +52,23 @@ export const GlobalHeader = () =>
                                 drop="down-start"
                             >
 
-                                <RouterLink to="/preguntas-frecuentes" className="dropdown-item" data-rr-ui-dropdown-item>
+                                <NavLink to="/preguntas-frecuentes" className={p => "dropdown-item"+activeToggler(p)} data-rr-ui-dropdown-item>
                                     Preguntas frecuentes
-                                </RouterLink>
+                                </NavLink>
 
-                                <RouterLink to="/como-comprar" className="dropdown-item" data-rr-ui-dropdown-item>
+                                <NavLink to="/como-comprar" className={p => "dropdown-item"+activeToggler(p)} data-rr-ui-dropdown-item>
                                     Cómo comprar
-                                </RouterLink>
+                                </NavLink>
 
-                                <RouterLink to="/metodos-de-pago" className="dropdown-item" data-rr-ui-dropdown-item>
+                                <NavLink to="/metodos-de-pago" className={p => "dropdown-item"+activeToggler(p)} data-rr-ui-dropdown-item>
                                     Métodos de pago
-                                </RouterLink>
+                                </NavLink>
 
                                 <NavDropdown.Divider />
 
-                                <RouterLink to="/encuentra-tu-ticket" className="dropdown-item" data-rr-ui-dropdown-item>
+                                <NavLink to="/encuentra-tu-ticket" className={p => "dropdown-item"+activeToggler(p)} data-rr-ui-dropdown-item>
                                     Encuentra tu Ticket
-                                </RouterLink>
+                                </NavLink>
 
                             </NavDropdown>
 
