@@ -314,12 +314,6 @@ header {
   width: 100%;
 }
 
-.heading {
-  padding: 1rem 0;
-  font-size: 3.5rem;
-  text-align: center;
-}
-
 .swiper_container {
   height: 52rem;
   padding: 2rem 0;
@@ -327,8 +321,8 @@ header {
 }
 
 .swiper-slide {
-  width: 37rem;
-  height: 42rem;
+  width: 37rem !important;;
+  height: 42rem !important;;
   position: relative;
 }
 

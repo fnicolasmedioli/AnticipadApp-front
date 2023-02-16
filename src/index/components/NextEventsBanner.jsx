@@ -53,18 +53,7 @@ export const NextEventsBanner = () =>
 
     return (
         <section id="next-events-section">
-            {/* <div className="container-fluid next-events-banner">
-                <div className="row">
-                    <h2 className="next-events-text">
-                        <span>Próximos eventos:</span>
-                        <i className="location-text">
-                            { (locationText) ? (" " + locationText) : null }
-                        </i>
-                    </h2>
-                    <h4>...</h4>
-                    <hr />
-                </div>
-            </div> */}
+            
             <div className="container-events">
                 <h2 className="next-events-text">
                     <span>Próximos eventos en:</span>
