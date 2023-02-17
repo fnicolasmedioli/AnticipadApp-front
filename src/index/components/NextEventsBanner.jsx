@@ -52,13 +52,15 @@ export const NextEventsBanner = () =>
         <section id="next-events-section">
             
             <div className="container-events">
-                <h2 className="next-events-text">
-                    <span>Próximos eventos
+                {/* Esto estaba raro, no funcionaba bien 
+                
+                 <h2 className="next-events-text">
+                    <span>Próximos eventos en:
                     {
                         (() => {
                             if (locationText) return (
                                 <span>
-                                    " en:" +
+                                  
                                     <i className="location-text">
                                         { locationText }
                                     </i>
@@ -67,7 +69,14 @@ export const NextEventsBanner = () =>
                         })()
                     }
                     </span>
+                </h2> */}
+                <h2 className="next-events-text">
+                    <span>Próximos eventos en:</span>
+                    <i className="location-text">
+                            { (locationText) ? (" " + locationText) : null }
+                    </i>
                 </h2>
+                
 
                 <div className="swiper-container">
                     <Swiper
