@@ -5,6 +5,8 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link as RouterLink, NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 
 function animateOnClick(e, animationName)
 {
@@ -62,7 +64,7 @@ export const GlobalHeader = () =>
                         <Nav className="ms-auto" bg="dark">
 
                             <NavLink to="/create" className={p => "nav-link"+activeToggler(p)}>Crear un evento</NavLink>
-                            <NavLink to="/login" className={p => "nav-link"+activeToggler(p)}>Iniciar Sesión</NavLink>
+                            <NavLink to="/login" className={p => "nav-link"+activeToggler(p)}><FontAwesomeIcon icon={faRightFromBracket} /> Iniciar Sesión</NavLink>
                             <NavLink to="/signup" className={p => "nav-link"+activeToggler(p)}>Registrarse</NavLink>
 
                             <NavDropdown
