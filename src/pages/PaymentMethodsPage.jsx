@@ -1,11 +1,11 @@
 import { GlobalHeader } from "../global/components";
+import { GenericTemplate } from "./templates";
 
 export const PaymentMethodsPage = () =>
 {
     return (
-        <>
-            <GlobalHeader />
+        <GenericTemplate>
             <p>Métodos de pago</p>
-        </>
+        </GenericTemplate>
     );
 };

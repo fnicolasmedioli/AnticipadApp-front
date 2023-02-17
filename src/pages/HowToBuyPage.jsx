@@ -1,11 +1,10 @@
-import { GlobalHeader } from "../global/components";
+import { GenericTemplate } from "./templates";
 
 export const HowToBuyPage = () =>
 {
     return (
-    <>
-        <GlobalHeader />
+    <GenericTemplate>
         <p>Como comprar</p>
-    </>
+    </GenericTemplate>
     );
 };

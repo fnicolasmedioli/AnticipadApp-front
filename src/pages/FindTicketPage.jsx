@@ -1,11 +1,10 @@
-import { GlobalHeader } from "../global/components";
+import { GenericTemplate } from "./templates";
 
 export const FindTicketPage = () =>
 {
     return (
-    <>
-        <GlobalHeader />
+    <GenericTemplate>
         <p>Encuentra tu ticket</p>
-    </>
+    </GenericTemplate>
     );
 };

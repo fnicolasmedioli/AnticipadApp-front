@@ -1,11 +1,10 @@
-import { GlobalHeader } from "../global/components";
+import { GenericTemplate } from "./templates";
 
 export const Error404 = () =>
 {
     return (
-    <>
-    <GlobalHeader />
-    <h3 className="error-404-text">404. Página no encontrada</h3>
-    </>
+        <GenericTemplate>
+            <h3 className="error-404-text">404. Página no encontrada</h3>
+        </GenericTemplate>
     );
 };
