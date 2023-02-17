@@ -272,10 +272,9 @@ header {
   background: #f9f9f9;
 }
 
-.container-events {
-  max-width: 124rem;
-  padding: 4rem 1rem;
-  margin: 0 auto;
+.next-events-box {
+  padding: 2rem;
+  text-align: center;
 }
 
 .container-events h2 {
@@ -287,25 +286,24 @@ header {
 .container-events hr {
   border: 1px solid white;
   width: 100%;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
-.swiper-container {
+.swiper {
+  width: 100%;
+  font-size: 0;
   position: relative;
-  padding: 2rem 0;
+  margin: 0;
+  padding: 0;
 }
 
 .swiper-slide {
   height: 65vh !important;
-  width: min(50vh, 70vw) !important;
-  position: relative;
+  width: min(50vh, 70vw) !important;  
+  background-size: cover !important;
+  background-position: center !important;
   border-radius: 2rem;
-  overflow: hidden;
-}
-
-.swiper-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .swiper-slide-shadow-left,
