@@ -52,15 +52,15 @@ export const NextEventsBanner = () =>
         <section id="next-events-section">
             
             <div className="container-events">
-                {/* Esto estaba raro, no funcionaba bien 
-                
+                  
                  <h2 className="next-events-text">
-                    <span>Próximos eventos en:
+                    <span>Próximos eventos
                     {
                         (() => {
                             if (locationText) return (
                                 <span>
-                                  
+                                    <span> en: </span>
+                                    <br />
                                     <i className="location-text">
                                         { locationText }
                                     </i>
@@ -69,14 +69,7 @@ export const NextEventsBanner = () =>
                         })()
                     }
                     </span>
-                </h2> */}
-                <h2 className="next-events-text">
-                    <span>Próximos eventos en:</span>
-                    <i className="location-text">
-                            { (locationText) ? (" " + locationText) : null }
-                    </i>
-                </h2>
-                
+                </h2>        
 
                 <div className="swiper-container">
                     <Swiper
@@ -91,34 +84,15 @@ export const NextEventsBanner = () =>
                             depth: 120,
                             modifier: 2.5
                         }}
-                        // pagination={{ el: ".swiper-pagination", clickable: true }}
+                        pagination={{ el: ".swiper-pagination", clickable: true }}
                         navigation={{   
                             nextEl: ".swiper-button-next",
                             prevEl: ".swiper-button-prev",
                             clickable: true, 
                         }}
-                        modules={[EffectCoverflow/*, Pagination*/, Navigation]}
+                        modules={[EffectCoverflow, Pagination, Navigation]}
                         // className = "swiper-container"
                     >
-                        <SwiperSlide>
-                            <img src={slide_image_1} alt="slide_image" />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={slide_image_2} alt="slide_image" />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={slide_image_3} alt="slide_image" />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={slide_image_4} alt="slide_image" />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={slide_image_5} alt="slide_image" />
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <img src={slide_image_6} alt="slide_image" />
-                        </SwiperSlide>
-
                         <SwiperSlide>
                             <img src={slide_image_1} alt="slide_image" />
                         </SwiperSlide>
@@ -145,7 +119,7 @@ export const NextEventsBanner = () =>
                             <div className="swiper-button-next slider-arrow">
                                 <ion-icon name="arrow-forward-outline"></ion-icon>
                             </div>
-                            {/*<div className="swiper-pagination"></div>*/}
+                            <div className="swiper-pagination"></div>
                         </div>
                     </Swiper>
                 </div>
