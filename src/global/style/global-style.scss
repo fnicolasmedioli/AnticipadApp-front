@@ -232,7 +232,9 @@ header {
     outline: 1px dashed black;
     background: $hover;
     margin-top: 10px;
-    border-radius: 15px;
+    //border-radius: 15px;
+    border-bottom-right-radius: 4rem;
+    border-top-right-radius: 4rem;
 }
 
 .benefit-icon {
@@ -538,4 +540,217 @@ header {
     color: $hover !important;
     cursor: default;
     opacity: 75%;
+}
+
+
+
+$label-width: 	130px;
+$label-height:	60px;
+$ticket_secondary: 	$body_bg;
+$lightgrey: 	$body_bg;
+
+.ticket-container {
+	max-width:900px;
+	width:92%;
+	margin:50px auto 50px auto;
+    color: $hover;
+}
+
+.ticket-container * {
+    box-sizing: border-box;
+}
+
+.bp-card {
+	position: relative;
+	
+	// label
+	.bp-card_label {
+		position:absolute;
+		top:30px;
+		left: 0;
+		bottom:30px;
+		width:$label-width;
+		background:white;
+		
+		// edges
+		&::before {
+			content:'';
+			background-color:transparent;
+			background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/372262/ticket-top.svg');
+			background-size:contain;
+			background-repeat:no-repeat;
+			width:$label-width;
+			height:100px;
+			position: absolute;
+			top: -30px;
+			left:0;
+		}	
+		&::after {
+			content:'';
+			background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/372262/ticket-bottom.svg');
+			background-size:contain;
+			background-position:bottom left;
+			background-repeat:no-repeat;
+			width:$label-width;
+			height:100px;
+			position: absolute;
+			bottom:-30px;
+			left:0;
+		}	
+		
+		// lines
+		.bd-border_dotted {
+			content:'';
+			width:0px;
+		    border-right: 5px dashed $lightgrey;
+			height:100%;
+			position:absolute;
+			top:0;
+			right:40px;
+		}
+		.bd-border_solid {
+			content:'';
+			width:3px;
+			border-radius:3px;
+			background:$ticket_secondary;
+			height:100%;
+			position:absolute;
+			top:0;
+			left:calc(#{$label-width}/3.1 );
+		}
+	}
+	
+	.bp-card_content {
+		position: relative;
+		background:white;
+		border-top-right-radius:3px;
+		border-bottom-right-radius:3px;
+		width:calc(100% - #{$label-width});
+		margin-left:calc(#{$label-width} - 1px);
+		padding:35px;
+		h4 {
+			font-size:40px;
+			margin:0 140px 0 0;
+            color: $body-bg;
+		}
+		
+		p.secondary {
+			color:$ticket_secondary;
+			margin:0;
+			padding-top:10px;
+		}
+			
+		ul {
+            color: $body-bg;
+			list-style:none;
+			margin:50px 0 0 0;
+			padding:0;
+			span {
+				display:block;
+				color:#A8A8A8;
+			}
+			li {
+				padding:0;
+				display:inline-block;
+				padding-right:30px;
+			}
+		}
+		
+		.price {
+			// background:transparentize($ticket_secondary, 0.9);
+            max-width: 3.5rem;
+            max-height: 3.5rem;
+            position: absolute;
+            right: 1rem;
+            top: 2rem;
+		}
+	}
+}
+
+@media only screen and (max-width:1200px) {
+	
+	.bp-card {
+		position: relative;
+		
+		// label
+		.bp-card_label {
+			top:0;
+			left: 0;
+			bottom:0;
+			width:calc(100% - 40px);
+			margin-left:20px;
+			height:120px;
+			position: relative;
+			
+			// sides;
+			&:after, &:before {
+				transform:rotate(90deg);
+				transform-origin: top left;
+				width:126px;
+   			top: -2px;
+			}
+			&:after {
+				left:80px;
+				right:auto;
+			}
+			&:before {
+				left: auto;
+    			right: -146px;
+			}
+				
+			.bd-border_dotted {
+				width:100%;
+				border-top: 4px dashed $lightgrey;
+				border-right:none;
+				height:4px;
+				top:92px;
+				left:0;
+			}
+			.bd-border_solid {
+				width:80%;
+				background:$ticket_secondary;
+				height:3px;
+				top:45px;
+				left:10%;
+			}
+		}
+		
+		// content
+		.bp-card_content {
+			margin-left:0;
+			width:100%;
+			padding:3% 5% 5% 5%;
+			
+			// title
+			h4 {
+				font-size:32px;
+				margin:0;
+			}
+			
+			// usp's
+			ul {
+			list-style:none;
+			margin:20px 0 0 0;
+			padding:0;
+				span {
+					display:block;
+					color:#A8A8A8;
+				}
+				li {
+					padding:0;
+					display:inline-block;
+					width:100%;
+					padding-right:30px;
+					margin-bottom:5px;
+				}
+			}
+			
+			// price
+			.price {
+				position:absolute;
+				bottom: 5px;
+				right:5px;		
+			}
+		}
+	}
 }

@@ -4,3 +4,4 @@ export * from "./WhyAnticipadApp";
 export * from "./AppBenefitsList";
 export * from "./AppBenefitsItem";
 export * from "./EventItem";
+export * from "./AppBenefitsTicket";
