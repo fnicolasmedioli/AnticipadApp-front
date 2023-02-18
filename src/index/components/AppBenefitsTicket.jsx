@@ -16,7 +16,7 @@ export const AppBenefitsTicket = ({title, text, icon}) =>
                             {text}
                         </li>
                     </ul>
-                        <img src={icon} alt="" className="price"/>
+                    <img src={icon} alt="" className="price"/>
                 </div>
             </div>
         </div>

@@ -742,14 +742,16 @@ $lightgrey: 	$body_bg;
 					width:100%;
 					padding-right:30px;
 					margin-bottom:5px;
+                    padding-right: 3.5rem;
 				}
 			}
 			
 			// price
 			.price {
 				position:absolute;
-				bottom: 5px;
-				right:5px;		
+				top: 3.5rem;
+				right:5px;
+                
 			}
 		}
 	}
