@@ -6,3 +6,4 @@ export * from "./HowToBuyPage";
 export * from "./PaymentMethodsPage";
 export * from "./FindTicketPage";
 export * from "./SignupPage";
+export * from "./ForgotPasswordPage";

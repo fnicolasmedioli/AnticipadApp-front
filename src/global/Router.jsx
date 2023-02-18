@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 
-import { IndexPage, LoginPage, Error404, FAQPage, HowToBuyPage, PaymentMethodsPage, FindTicketPage, SignupPage } from "../pages";
+import { IndexPage, LoginPage, Error404, FAQPage, HowToBuyPage, PaymentMethodsPage, FindTicketPage, SignupPage, ForgotPasswordPage } from "../pages";
 
 export const MainRouter = () =>
 {
@@ -13,6 +13,7 @@ export const MainRouter = () =>
             <Route path="/como-comprar" element={<HowToBuyPage /> } />
             <Route path="/metodos-de-pago" element={<PaymentMethodsPage /> } />
             <Route path="/encuentra-tu-ticket" element={<FindTicketPage /> } />
+            <Route path="/forgot-password" element={<ForgotPasswordPage /> } />
             <Route path="/*" element={<Error404 />} />
         </Routes>
     );
