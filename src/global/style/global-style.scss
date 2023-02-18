@@ -298,6 +298,10 @@ header {
   padding: 0;
 }
 
+.swiper-container {
+  width: 100%;
+}
+
 .swiper-slide {
   height: 65vh !important;
   width: min(50vh, 70vw) !important;  

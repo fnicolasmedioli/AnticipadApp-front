@@ -32,6 +32,8 @@ export const NextEventsBanner = () =>
     let [region, setRegion] = useState(null);
 
     let locationText = (city && region) ? `${city}, ${region}` : null;
+
+    const activateLoop = slideImageArray.length > 10;
     
     useEffect(() => {
         axios.request({
@@ -80,8 +82,8 @@ export const NextEventsBanner = () =>
                     effect = "coverflow"
                     grabCursor
                     centeredSlides
-                    loop
-                    slidesPerView = "auto"
+                    slidesPerView = { "auto" }
+                    loop = { activateLoop }
                     coverflowEffect={{
                         rotate: 0,
                         stretch: 0,
