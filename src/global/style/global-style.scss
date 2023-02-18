@@ -3,6 +3,7 @@
 
 $body-bg: #000025;
 $secondary: #17002f;
+// 17002f
 $hover: #ff0059;
 $success: #00d7fb;
 
@@ -496,6 +497,41 @@ header {
 .accordion {
     border-radius: 1rem;
     overflow: hidden;
+    //outline: 1px solid $hover;
+    box-shadow: 0 0 5px 3px #f0f0f0;
+}
+
+.accordion-item {
+    //background: white;
+    // background: rgba(255, 255, 255, 0.6);
+    background-color: #f0f0f0;
+    //outline: 1px solid $hover;
+}
+
+.accordion-button:not([class*="collapsed"]) {
+    border-bottom: 1px solid #0c63e4;
+}
+
+.accordion-button.accordion-button {
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #f0f0f0;
+    
+}
+
+.accordion-button.collapsed {
+    background-color: rgba(23, 0, 47, 0.9);
+    color: white;
+}
+
+.accordion-body {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.accordion-button::after {
+    color: $hover;
+    display: none;
 }
 
 .nav-link-active {
