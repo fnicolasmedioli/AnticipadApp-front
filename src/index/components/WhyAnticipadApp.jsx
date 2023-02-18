@@ -18,7 +18,7 @@ export const WhyAnticipadApp = () =>
                                 ¡AnticipadApp es la mejor forma de comprar entradas online! Con nuestra app, podés disfrutar de los siguientes beneficios:
                             </span>
                         </div>
-                        <div className="col-12 col-sm-6 px-5">
+                        <div className="col-12 col-sm-6">
                             <AppBenefitsList />
                         </div>
                     </div>

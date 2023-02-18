@@ -6,7 +6,7 @@ export const AppBenefitsItem = ({title, text, icon}) =>
                 <div className="col-3 benefit-icon" style={{
                     backgroundImage: `url('${icon}')`
                 }}></div>
-                <div className="col-9">
+                <div className="col-8">
                     <span className="app-benefits-item-title">{title}</span>
                     <br />
                     <i className="app-benefits-item-text">{text}</i>
