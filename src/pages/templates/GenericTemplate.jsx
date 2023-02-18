@@ -1,4 +1,4 @@
-import { GlobalHeader } from "../../global/components";
+import { GlobalHeader } from "../../components";
 
 export const GenericTemplate = ({children}) =>
 {

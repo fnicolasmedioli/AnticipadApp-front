@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 
-import { IndexPage, LoginPage, Error404, FAQPage, HowToBuyPage, PaymentMethodsPage, FindTicketPage, SignupPage, ForgotPasswordPage } from "../pages";
+import { IndexPage, LoginPage, Error404, FAQPage, HowToBuyPage, PaymentMethodsPage, FindTicketPage, SignupPage, ForgotPasswordPage } from "./pages";
 
 export const MainRouter = () =>
 {

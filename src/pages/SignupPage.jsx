@@ -1,7 +1,6 @@
-import { LoginBox } from "../auth/components";
-import { GlobalHeader } from "../global/components";
-import { GenericTemplate } from "./templates";
 import { Link as RouterLink } from "react-router-dom";
+
+import { GenericTemplate } from "./templates";
 
 export const SignupPage = () =>
 {
