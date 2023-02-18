@@ -1,9 +1,134 @@
-.auth-box {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 15px;
+.anticipadapp-header {
+    position: absolute;
+    text-align: center;
+    top: 2rem;
+    font-family: "Grand Slang";
+    font-size: 4rem;
 }
 
-.auth-box input {
-    margin-bottom: 1rem;
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // min-height: 100vh;
+    color: #f0f0f0;
+    flex-direction: column;
+    position: relative;
+    top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.form {
+    position: relative;
+    background: #060c21;
+    border: 1px solid #000;
+    width: 350px;
+    padding: 40px 40px 60px;
+    border-radius: 10px;
+    text-align: center;
+}
+.form::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    background: linear-gradient(315deg, #e91e63, #5d02ff);
+    z-index: -1;
+    transform: skew(2deg, 1deg);
+    border-radius: 10px;
+}
+.form h2 {
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-family: "Grand Slang", cursive;
+}
+.form .input {
+    margin-top: 40px;
+    text-align: left;
+}
+.form .input .inputBox {
+    margin-top: 10px;
+}
+.form .input .inputBox label {
+    display: block;
+    color: #fff;
+    margin-bottom: 5px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+.form .input .inputBox input {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    padding: 5px 15px;
+    background: linear-gradient(315deg, #e91e63, #5d02ff);
+    color: #fff;
+    font-size: 18px;
+    border-radius: 10px;
+}
+.form .input .inputBox input[type="submit"] {
+    cursor: pointer;
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+.form .input .inputBox input[type="submit"]:hover {
+    background: linear-gradient(315deg, #5d02ff, #e91e63);
+}
+.form .input .inputBox input[type="submit"]:active {
+    color: rgba(255, 255, 255, 0.521);
+    background: linear-gradient(315deg, #e91e6271, #5f02ff8c);
+}
+.forgot {
+    margin-top: 10px;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+.forgot a {
+    color: #e91e63;
+}
+
+.alternative-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+    padding: 0 2rem;
+}
+.alternative-login label {
+    color: #f0f0f0;
+}
+
+.iconGroup {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin-top: 2rem;
+}
+
+.iconGroup a {
+    text-decoration: none;
+    color: #f0f0f0;
+}
+
+.icon-details {
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 1px #1f1f1f;
+    transition: transform 0.3s ease-out;
+}
+
+.icon-details:hover {
+    transform: translateY(8px);
+}
+
+.no-account-text {
+    margin-top: 15px;
 }
