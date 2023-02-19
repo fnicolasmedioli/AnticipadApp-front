@@ -30,12 +30,15 @@ const AnticipadApp = () =>
             }
         })
         .then(response => {
+            const location = {
+                city: response.data.city,
+                region: response.data.region
+            };
+            console.log("Location: ");
+            console.log(location);
             setUserData({
                 ...userData,
-                location: {
-                    city: response.data.city,
-                    region: response.data.region
-                }
+                location
             });
         })
         .catch(console.error);

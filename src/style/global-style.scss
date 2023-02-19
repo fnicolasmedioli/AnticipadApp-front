@@ -117,6 +117,11 @@ header {
     justify-content: center;
     margin-left: 2rem;
     flex-wrap: wrap;
+    position: relative;
+}
+
+.location-box > input {
+    white-space: nowrap;
 }
 
 .location-input-container {
@@ -144,6 +149,7 @@ header {
     height: 100%;
     box-sizing: border-box;    
     border-bottom: 1px solid white;
+    cursor: text;
 }
 
 .location-input-container input:focus,
@@ -154,10 +160,39 @@ header {
 .location-input-container span {
     border: none;
     position: absolute;
-    right: 10px;
+    right: 0;
     top: 50%;
     transform: translateY(-50%);
     background: none;
+}
+
+.search-results-box {
+    position: absolute;
+    width: fit-content;
+    background-color: $secondary;
+    z-index: 2;
+    border: 2px solid white;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3px;
+    overflow: hidden;
+    bottom: 0;
+    transform: translateY(calc(100% + 10px));
+    margin-top: 15px;
+    margin: auto;
+}
+
+.search-result {
+    box-sizing: border-box;
+    width: 100%;
+    color: white;
+    background-color: $body-bg;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    overflow: hidden;
 }
 
 @font-face {
@@ -552,6 +587,7 @@ header {
     overflow: hidden;
     //outline: 1px solid $hover;
     box-shadow: 0 0 5px 3px #f0f0f0;
+    margin-bottom: 3rem;
 }
 
 .accordion-item {
@@ -805,4 +841,8 @@ $lightgrey: 	$body_bg;
 			}
 		}
 	}
+}
+
+.hidden {
+    display: none;
 }
