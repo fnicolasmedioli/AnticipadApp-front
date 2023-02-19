@@ -8,6 +8,8 @@ import { Link as RouterLink, NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons';
 
+import { LocationBox } from ".";
+
 function animateOnClick(e, animationName)
 {
     const animatedItemClass = "animate__animated";
@@ -41,29 +43,14 @@ export const GlobalHeader = () =>
 
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
+
                         <Nav className="mr-auto">
-                            <Form 
-                                className="d-flex"
-                            >
-                                <Form.Control
-                                    type="search"
-                                    placeholder="Buscar eventos"
-                                    className="me-2"
-                                    aria-label="Search"
-                                    /*
-                                    onClick={e => {
-                                        animateInput(e, "animate__rubberBand")
-                                    }}
-                                    */
-                                />
-                                <Button className="navbar-search-button" variant="outline-light" onClick={e => {
-                                    animateOnClick(e, "animate__rubberBand")
-                                }}>Buscar</Button>
-                            </Form>
-                        </Nav>    
+                            <LocationBox />
+                        </Nav>
+
                         <Nav className="ms-auto" bg="dark">
 
-                            <NavLink to="/create" className={p => "nav-link"+activeToggler(p)}>Crear un evento</NavLink>
+                            {/*<NavLink to="/create" className={p => "nav-link"+activeToggler(p)}>Crear un evento</NavLink>*/}
                             <NavLink to="/login" className={p => "nav-link"+activeToggler(p)}><FontAwesomeIcon icon={faRightFromBracket} /> Iniciar Sesión</NavLink>
                             <NavLink to="/signup" className={p => "nav-link"+activeToggler(p)}>Registrarse</NavLink>
 

@@ -1,15 +1,12 @@
-import { useEffect, useState } from "react";
-
-import axios from "axios";
-
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
 import { EffectCoverflow, Pagination, Navigation } from "swiper";
+import { useContext } from "react";
+
+import { UserContext } from "../context";
 
 const slideImageArray = [
     "/assets/images/events/bresh.jpg",
@@ -28,31 +25,12 @@ const slideImageArray = [
 
 export const NextEventsBanner = () =>
 {
-    let [city, setCity] = useState(null);
-    let [region, setRegion] = useState(null);
+    const { userData } = useContext(UserContext);
+    const city = userData?.location?.city;
+    const region = userData?.location?.region;
 
-    let locationText = (city && region) ? `${city}, ${region}` : null;
-
+    const locationText = (city && region) ? `${city}, ${region}` : null;
     const activateLoop = slideImageArray.length > 10;
-    
-    useEffect(() => {
-        axios.request({
-            method: "get",
-            url: "https://cors-anywhere.herokuapp.com/https://ip-api.org/json/",
-            headers: {
-                "Access-Control-Allow-Origin": "*",
-                "Content-Type": "application/json",
-                "Access-Control-Allow-Headers": "*",
-                "Access-Control-Allow-Methods": "POST, GET, OPTIONS",
-                "Access-Control-Allow-Credentials": "true"
-            }
-        })
-        .then(response => {
-            setCity(response.data.city);
-            setRegion(response.data.region);
-        })
-        .catch(console.error);
-    }, []);
 
     return (
         <section id="next-events-section">
