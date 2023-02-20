@@ -221,8 +221,8 @@ header {
 
 .dropdown-item:active,
 .dropdown-item:focus {
-    background: $white;
-    color: $secondary;
+    background: $white !important;
+    color: $secondary !important;
 }
 
 .navbar {
