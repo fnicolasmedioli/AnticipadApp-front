@@ -7,3 +7,4 @@ export * from "./MainImage";
 export * from "./NextEventsBanner";
 export * from "./WhyAnticipadApp";
 export * from "./LocationBox";
+export * from "./LoginBox";

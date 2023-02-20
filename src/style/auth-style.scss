@@ -10,12 +10,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // min-height: 100vh;
     color: #f0f0f0;
     flex-direction: column;
     position: relative;
-    top: 2rem;
-    margin-bottom: 2rem;
 }
 
 .form {
@@ -27,6 +24,7 @@
     border-radius: 10px;
     text-align: center;
 }
+
 .form::before {
     content: "";
     position: absolute;
@@ -132,4 +130,16 @@
 
 .no-account-text {
     margin-top: 15px;
+}
+
+.back-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: none;
+    padding: 10px;
+    color: white;
+    outline: none;
+    border: none;
+    box-shadow: none;
 }
