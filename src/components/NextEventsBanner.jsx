@@ -20,80 +20,72 @@ const slideImageArray = [
     "/assets/images/events/metallica.jpg",
     "/assets/images/events/daddy_yankee.jpg",
     "/assets/images/events/duki.jpg",
-    "/assets/images/events/maria_becerra.jpg"
+    "/assets/images/events/maria_becerra.jpg",
 ];
 
-export const NextEventsBanner = () =>
-{
+export const NextEventsBanner = () => {
     const { userData } = useContext(UserContext);
     const city = userData?.location?.city;
     const region = userData?.location?.region;
 
-    const locationText = (city && region) ? `${city}, ${region}` : null;
+    const locationText = city && region ? `${city}, ${region}` : null;
     const activateLoop = slideImageArray.length > 10;
 
     return (
         <section id="next-events-section">
             <div className="container-events">
-
                 <div className="next-events-box">
                     <h2 className="next-events-text">
-                        <span>Próximos eventos
-                        {
-                            (() => {
-                                if (locationText) return (
-                                    <span>
-                                        <span> en: </span>
-                                        <br />
-                                        <i className="location-text">
-                                            { locationText }
-                                        </i>
-                                    </span>
-                                );
-                            })()
-                        }
+                        <span>
+                            Próximos eventos
+                            {(() => {
+                                if (locationText)
+                                    return (
+                                        <span>
+                                            <span> en: </span>
+                                            <br />
+                                            <i className="location-text">
+                                                {locationText}
+                                            </i>
+                                        </span>
+                                    );
+                            })()}
                         </span>
                     </h2>
                 </div>
 
                 <Swiper
-                    effect = "coverflow"
+                    effect="coverflow"
                     grabCursor
                     centeredSlides
-                    slidesPerView = { "auto" }
-                    loop = { activateLoop }
+                    slidesPerView={"auto"}
+                    loop={activateLoop}
                     coverflowEffect={{
                         rotate: 0,
                         stretch: 0,
                         depth: 120,
-                        modifier: 2.5
+                        modifier: 2.5,
                     }}
                     pagination={{
                         el: ".swiper-pagination",
-                        clickable: true
+                        clickable: true,
                     }}
-                    navigation={{   
+                    navigation={{
                         nextEl: ".swiper-button-next",
                         prevEl: ".swiper-button-prev",
-                        clickable: true, 
+                        clickable: true,
                     }}
-                    modules={[
-                        EffectCoverflow,
-                        Pagination,
-                        Navigation
-                    ]}
-                    className = "swiper-container"
+                    modules={[EffectCoverflow, Pagination, Navigation]}
+                    className="swiper-container"
                 >
-                    {
-                        slideImageArray.map((url, index) => (
-                            <SwiperSlide
-                                key={index}
-                                style={{
-                                    backgroundImage: `url("${url}")`
-                                }}
-                            />
-                        ))
-                    }
+                    {slideImageArray.map((url, index) => (
+                        <SwiperSlide
+                            key={index}
+                            style={{
+                                backgroundImage: `url("${url}")`,
+                            }}
+                        />
+                    ))}
 
                     <div className="slider-controler">
                         <div className="swiper-button-prev slider-arrow">
@@ -104,12 +96,10 @@ export const NextEventsBanner = () =>
                         </div>
                         <div className="swiper-pagination"></div>
                     </div>
-
                 </Swiper>
 
                 <hr />
             </div>
-            
         </section>
     );
 };

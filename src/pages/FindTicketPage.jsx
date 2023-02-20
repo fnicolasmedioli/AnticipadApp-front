@@ -1,10 +1,9 @@
 import { GenericTemplate } from "./templates";
 
-export const FindTicketPage = () =>
-{
+export const FindTicketPage = () => {
     return (
-    <GenericTemplate>
-        <p>Encuentra tu ticket</p>
-    </GenericTemplate>
+        <GenericTemplate>
+            <p>Encuentra tu ticket</p>
+        </GenericTemplate>
     );
 };

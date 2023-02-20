@@ -1,10 +1,9 @@
 import { GenericTemplate } from "./templates";
 
-export const HowToBuyPage = () =>
-{
+export const HowToBuyPage = () => {
     return (
-    <GenericTemplate>
-        <p>Como comprar</p>
-    </GenericTemplate>
+        <GenericTemplate>
+            <p>Como comprar</p>
+        </GenericTemplate>
     );
 };

@@ -1,8 +1,7 @@
 import { GenericTemplate } from "./templates";
-import { MainImage, NextEventsBanner, WhyAnticipadApp, } from "../components";
+import { MainImage, NextEventsBanner, WhyAnticipadApp } from "../components";
 
-export const IndexPage = () =>
-{
+export const IndexPage = () => {
     return (
         <GenericTemplate>
             <MainImage />

@@ -1,7 +1,4 @@
-
-
-export const EventItem = ({title, img}) =>
-{
+export const EventItem = ({ title, img }) => {
     return (
         <div className="view view-first">
             <figure>

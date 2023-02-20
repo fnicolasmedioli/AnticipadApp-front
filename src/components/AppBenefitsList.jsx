@@ -1,10 +1,8 @@
 import { AppBenefitsTicket } from ".";
 
-export const AppBenefitsList = () =>
-{
+export const AppBenefitsList = () => {
     return (
         <div className="app-benefits-list">
-
             <AppBenefitsTicket
                 title="Comodidad"
                 text={
@@ -28,12 +26,15 @@ export const AppBenefitsList = () =>
             <AppBenefitsTicket
                 title={
                     <>
-                    Opciones<br />
-                    <span style={{
-                        whiteSpace:"nowrap"
-                    }}>
-                        de pago
-                    </span>
+                        Opciones
+                        <br />
+                        <span
+                            style={{
+                                whiteSpace: "nowrap",
+                            }}
+                        >
+                            de pago
+                        </span>
                     </>
                 }
                 text="Elija entre una variedad de opciones de pago, incluidas tarjetas de crédito/débito y servicios de pago en línea, para realizar su compra de forma rápida y sencilla."
@@ -45,7 +46,6 @@ export const AppBenefitsList = () =>
                 text="Sé el primero en conocer los descuentos y promociones exclusivas disponibles solo a través de AnticipadApp."
                 icon="/assets/emojis/discount.png"
             />
-
         </div>
     );
 };

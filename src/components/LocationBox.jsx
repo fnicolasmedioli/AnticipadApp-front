@@ -2,29 +2,25 @@ import { useContext, useState } from "react";
 
 import { UserContext } from "../context";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-
-export const LocationBox = () =>
-{
+export const LocationBox = () => {
     const { userData } = useContext(UserContext);
-    const [ inputValue, setInputValue ] = useState("");
+    const [inputValue, setInputValue] = useState("");
 
     // Boolean to manage input content when location is detected
-    const [ firstValueSettled, settleFirstValue ] = useState(false);
+    const [firstValueSettled, settleFirstValue] = useState(false);
 
     const city = userData?.location?.city;
     const region = userData?.location?.region;
-    const locationText = (city && region) ? `${city}, ${region}` : "";
+    const locationText = city && region ? `${city}, ${region}` : "";
 
-    if (!firstValueSettled && locationText)
-    {
+    if (!firstValueSettled && locationText) {
         setInputValue(locationText);
         settleFirstValue(true);
     }
 
-    function onInputChange({target})
-    {
+    function onInputChange({ target }) {
         setInputValue(target.value);
     }
 
@@ -45,12 +41,8 @@ export const LocationBox = () =>
             </div>
 
             <div className="search-results-box hidden">
-                <div className="search-result">
-                    Rauch, Buenos Aires
-                </div>
-                <div className="search-result">
-                    Tandil, Buenos Aires
-                </div>
+                <div className="search-result">Rauch, Buenos Aires</div>
+                <div className="search-result">Tandil, Buenos Aires</div>
             </div>
         </div>
     );

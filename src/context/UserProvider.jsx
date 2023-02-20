@@ -1,10 +1,7 @@
 import { UserContext } from ".";
 
-export const UserProvider = ({children, value}) =>
-{
+export const UserProvider = ({ children, value }) => {
     return (
-        <UserContext.Provider value={value}>
-            { children }
-        </UserContext.Provider>
+        <UserContext.Provider value={value}>{children}</UserContext.Provider>
     );
 };

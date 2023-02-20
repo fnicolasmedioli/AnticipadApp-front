@@ -1,11 +1,10 @@
 import { GlobalHeader } from "../../components";
 
-export const GenericTemplate = ({children}) =>
-{
+export const GenericTemplate = ({ children }) => {
     return (
-    <>
-        <GlobalHeader />
-        { children }
-    </>
+        <>
+            <GlobalHeader />
+            {children}
+        </>
     );
 };

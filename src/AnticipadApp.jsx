@@ -11,45 +11,46 @@ import "./style/auth-style.scss";
 import { MainRouter } from "./Router";
 import { UserContext, UserProvider } from "./context";
 
-
-const AnticipadApp = () =>
-{
+const AnticipadApp = () => {
     const [userData, setUserData] = useState({});
-    
+
     useEffect(() => {
         console.log("ip-api request");
-        axios.request({
-            method: "get",
-            url: "https://cors-anywhere.herokuapp.com/https://ip-api.org/json/",
-            headers: {
-                "Access-Control-Allow-Origin": "*",
-                "Content-Type": "application/json",
-                "Access-Control-Allow-Headers": "*",
-                "Access-Control-Allow-Methods": "POST, GET, OPTIONS",
-                "Access-Control-Allow-Credentials": "true"
-            }
-        })
-        .then(response => {
-            const location = {
-                city: response.data.city,
-                region: response.data.region
-            };
-            console.log("Location: ");
-            console.log(location);
-            setUserData({
-                ...userData,
-                location
-            });
-        })
-        .catch(console.error);
+        axios
+            .request({
+                method: "get",
+                url: "https://cors-anywhere.herokuapp.com/https://ip-api.org/json/",
+                headers: {
+                    "Access-Control-Allow-Origin": "*",
+                    "Content-Type": "application/json",
+                    "Access-Control-Allow-Headers": "*",
+                    "Access-Control-Allow-Methods": "POST, GET, OPTIONS",
+                    "Access-Control-Allow-Credentials": "true",
+                },
+            })
+            .then((response) => {
+                const location = {
+                    city: response.data.city,
+                    region: response.data.region,
+                };
+                console.log("Location: ");
+                console.log(location);
+                setUserData({
+                    ...userData,
+                    location,
+                });
+            })
+            .catch(console.error);
     }, []);
 
     return (
         <BrowserRouter>
-            <UserProvider value={{
-                userData,
-                setUserData
-            }}>
+            <UserProvider
+                value={{
+                    userData,
+                    setUserData,
+                }}
+            >
                 <MainRouter />
             </UserProvider>
         </BrowserRouter>
