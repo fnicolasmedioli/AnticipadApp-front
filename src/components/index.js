@@ -8,3 +8,5 @@ export * from "./NextEventsBanner";
 export * from "./WhyAnticipadApp";
 export * from "./LocationBox";
 export * from "./LoginBox";
+export * from "./SignupBox";
+export * from "./ForgotPasswordBox";
