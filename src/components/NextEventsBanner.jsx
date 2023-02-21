@@ -98,7 +98,11 @@ export const NextEventsBanner = () => {
                     </div>
                 </Swiper>
 
-                <hr />
+                <hr
+                    style={{
+                        opacity: "0",
+                    }}
+                />
             </div>
         </section>
     );
