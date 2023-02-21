@@ -186,7 +186,6 @@ header {
     border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
-    row-gap: 3px;
     overflow: hidden;
     bottom: 0;
     transform: translateY(calc(100% + 10px));
@@ -204,6 +203,11 @@ header {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     overflow: hidden;
+    cursor: pointer;
+}
+
+.search-result:hover {
+    background: $hover;
 }
 
 @font-face {
