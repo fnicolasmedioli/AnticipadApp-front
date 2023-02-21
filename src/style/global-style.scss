@@ -29,7 +29,6 @@ $success: #00d7fb;
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
 body {
@@ -38,8 +37,7 @@ body {
     background-repeat: repeat;
     background-position: center;
     background-size: 100px;
-    position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .background-image {
