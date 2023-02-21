@@ -1,4 +1,4 @@
-import geoData from "../data/geoData.json";
+import geoData from "../../public/data/geoData.json";
 
 export const searchLocation = s => {
     const loweredSearch = s.toLowerCase();
