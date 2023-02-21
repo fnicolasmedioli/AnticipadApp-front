@@ -16,6 +16,11 @@ $success: #00d7fb;
 }
 */
 
+::selection {
+    background-color: $hover;
+    color: white;
+}
+
 * {
     font-family: "Galano Grotesque";
     margin: 0;
@@ -164,6 +169,8 @@ header {
     top: 50%;
     transform: translateY(-50%);
     background: none;
+    z-index: 5;
+    cursor: pointer;
 }
 
 .search-results-box {
