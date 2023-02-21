@@ -49,18 +49,18 @@ export const GlobalHeader = () => {
                             <LocationBox />
                         </Nav>
 
-                        <Nav className="ms-auto" bg="dark">
+                        <Nav className="ms-auto right-nav-menu" bg="dark">
                             {/*<NavLink to="/create" className={p => "nav-link"+activeToggler(p)}>Crear un evento</NavLink>*/}
                             <NavLink
                                 to="/login"
-                                className={(p) => "nav-link" + activeToggler(p)}
+                                className={p => "nav-link" + activeToggler(p)}
                             >
                                 <FontAwesomeIcon icon={faRightFromBracket} />{" "}
                                 Iniciar Sesión
                             </NavLink>
                             <NavLink
                                 to="/signup"
-                                className={(p) => "nav-link" + activeToggler(p)}
+                                className={p => "nav-link" + activeToggler(p)}
                             >
                                 Registrarse
                             </NavLink>
@@ -68,12 +68,12 @@ export const GlobalHeader = () => {
                             <NavDropdown
                                 title="Ayuda"
                                 bg="dark"
-                                className="collasible-nav-dropdown"
+                                className="collasible-nav-dropdown header-collasible-dropdown"
                                 drop="down-start"
                             >
                                 <NavLink
                                     to="/preguntas-frecuentes"
-                                    className={(p) =>
+                                    className={p =>
                                         "dropdown-item" + activeToggler(p)
                                     }
                                     data-rr-ui-dropdown-item
@@ -83,7 +83,7 @@ export const GlobalHeader = () => {
 
                                 <NavLink
                                     to="/como-comprar"
-                                    className={(p) =>
+                                    className={p =>
                                         "dropdown-item" + activeToggler(p)
                                     }
                                     data-rr-ui-dropdown-item
@@ -93,7 +93,7 @@ export const GlobalHeader = () => {
 
                                 <NavLink
                                     to="/metodos-de-pago"
-                                    className={(p) =>
+                                    className={p =>
                                         "dropdown-item" + activeToggler(p)
                                     }
                                     data-rr-ui-dropdown-item
@@ -105,7 +105,7 @@ export const GlobalHeader = () => {
 
                                 <NavLink
                                     to="/encuentra-tu-ticket"
-                                    className={(p) =>
+                                    className={p =>
                                         "dropdown-item" + activeToggler(p)
                                     }
                                     data-rr-ui-dropdown-item

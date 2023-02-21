@@ -236,6 +236,30 @@ header {
     color: $secondary !important;
 }
 
+.right-nav-menu {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.header-collasible-dropdown > div.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    margin-left: auto;
+}
+
+.header-collasible-dropdown.nav-item.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-collasible-dropdown .dropdown-item {
+    width: 100% !important;
+}
+
 .navbar {
     background-color: $secondary;
     color: white;
@@ -249,6 +273,7 @@ header {
         font-size: 1rem;
         font-weight: bold;
         text-align: center;
+        width: fit-content;
     }
     button {
         border-width: 2px;
