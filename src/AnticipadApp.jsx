@@ -19,16 +19,9 @@ const AnticipadApp = () => {
         axios
             .request({
                 method: "get",
-                url: "https://cors-anywhere.herokuapp.com/https://ip-api.org/json/",
-                headers: {
-                    "Access-Control-Allow-Origin": "*",
-                    "Content-Type": "application/json",
-                    "Access-Control-Allow-Headers": "*",
-                    "Access-Control-Allow-Methods": "POST, GET, OPTIONS",
-                    "Access-Control-Allow-Credentials": "true",
-                },
+                url: "https://ipapi.co/json",
             })
-            .then((response) => {
+            .then(response => {
                 const location = {
                     city: response.data.city,
                     region: response.data.region,
