@@ -1,12 +1,14 @@
 import { useContext, useState, useRef } from "react";
 
-import { UserContext } from "../context";
+import { UserContext, GeoContext } from "../context";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { searchLocation } from "../helpers/searchLocation";
+// import { searchLocation } from "../helpers/searchLocation";
 
 export const LocationBox = () => {
     const { userData } = useContext(UserContext);
+    const { searchLocation } = useContext(GeoContext);
+
     const [inputValue, setInputValue] = useState("");
     const [searchResults, setSearchResults] = useState([]);
     const [showResults, setShowResults] = useState(false);
@@ -77,11 +79,11 @@ export const LocationBox = () => {
                 ref={resultsRef}
             >
                 {searchResults.map(result => {
-                    const text = `${result[0]}, ${result[2]}`;
+                    const text = `${result.name}, ${result.region}`;
                     return (
                         <div
                             className="search-result"
-                            key={result[1]}
+                            key={result.id}
                             onMouseDown={() => {
                                 setInputValue(text);
                             }}
