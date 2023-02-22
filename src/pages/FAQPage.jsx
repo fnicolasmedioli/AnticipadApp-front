@@ -25,10 +25,10 @@ export const FAQPage = () => {
                     </Accordion.Item>
                     <Accordion.Item eventKey="1">
                         <Accordion.Header>
-                            NO ME LLEGÓ EL EMAIL DE CONFIRMACIÓN DE COMPRA.
+                            No me llegó el email de confirmación de compra.
                         </Accordion.Header>
                         <Accordion.Body>
-                            Le sugerimos consultar la bandeja de SPAM/Correo no
+                            Le sugerimos consultar la bandeja de correo no
                             deseado, es posible que se encuentre ahí. En caso de
                             no ubicarlo podrá iniciar sesión ingresando en "Mi
                             Cuenta", donde podrá consultar el historial de
@@ -39,53 +39,53 @@ export const FAQPage = () => {
                     </Accordion.Item>
                     <Accordion.Item eventKey="2">
                         <Accordion.Header>
-                            ¿CÓMO DESCARGO MI ETICKET DESDE LA APP?
+                            ¿Cómo descargo mi ticket desde la app?
                         </Accordion.Header>
                         <Accordion.Body>
-                            Haciendo clic en "DESCARGA TU TICKET AQUÍ" será
-                            derivado a la web de AnticipadApp donde deberá
-                            loguearse con el mismo email y contraseña utilizados
-                            para la compra de entradas. Una vez completado todos
-                            los campos requeridos, se descargará el ticket
+                            Haciendo clic en "DESCARGA TU TICKET" será derivado
+                            a la web de AnticipadApp donde deberá loguearse con
+                            el mismo email y contraseña utilizados para la
+                            compra de entradas. Una vez completado todos los
+                            campos requeridos, se descargará el ticket
                             electrónico en formato de archivo PDF. Le
                             recomendamos llevarlo impreso o bien mostrarlo desde
-                            tu celular.
+                            su celular.
                         </Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="3">
                         <Accordion.Header>
-                            ¿CÓMO DESCARGO MI TICKET SI NO ENCUENTRO EL EMAIL DE
-                            CONFIRMACIÓN DE COMPRA?
+                            ¿Cómo descargo mi ticket si no encuentro el email de
+                            confirmación de compra?
                         </Accordion.Header>
                         <Accordion.Body>
                             Ingresando en nuestra web deberá hacer clic en
-                            “DESCARGA TU Eticket” y loguearse con el mismo email
-                            y contraseña utilizados para la compra de entradas.
-                            Ir a la pestaña "MIS COMPRAS", visualice su número
-                            de ORDEN y haga clic en el icono "DESCARGAR
-                            eTicket". Una vez completado todos los CAMPOS
-                            requeridos además de la DDJJ, se descargará el
-                            eTicket electrónico en formato de archivo PDF. Le
+                            "DESCARGA TU TICKET y loguearse con el mismo email y
+                            contraseña utilizados para la compra de entradas. Ir
+                            a la pestaña "MIS COMPRAS", visualice su número de
+                            ORDEN y haga clic en el icono "DESCARGAR TICKET".
+                            Una vez completado todos los CAMPOS requeridos
+                            además de la DDJJ, se descargará el TICKET
+                            electrónico en formato de archivo PDF. Le
                             recomendamos llevarlo impreso o bien mostrarlo desde
                             tu celular.
                         </Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="4">
                         <Accordion.Header>
-                            ¿QUÉ TIEMPO TENGO PARA DESCARGAR MI eTICKET?
+                            ¿Cuánto tiempo tengo para descargar mi ticket?
                         </Accordion.Header>
                         <Accordion.Body>
-                            La descarga del eTicket electrónico estará
-                            habilitado desde una semana antes del evento hasta 2
-                            hs antes del comienzo de la función. Tenga en cuenta
-                            que una vez comenzado el espectáculo se bloquea la
-                            descarga del mismo.
+                            La descarga del TICKET electrónico estará habilitado
+                            desde una semana antes del evento hasta 2 hs antes
+                            del comienzo de la función. Tenga en cuenta que una
+                            vez comenzado el espectáculo se bloquea la descarga
+                            del mismo.
                         </Accordion.Body>
                     </Accordion.Item>
                     <Accordion.Item eventKey="5">
                         <Accordion.Header>
-                            ¿SI NO ASISTÍ AL EVENTO PUEDO SOLICITAR LA
-                            CANCELACIÓN?
+                            ¿Si no asistí al evento puedo solicitar la
+                            cancelación?
                         </Accordion.Header>
                         <Accordion.Body>
                             No. La ubicación que adquirió quedó sin utilizar el
@@ -95,7 +95,7 @@ export const FAQPage = () => {
                     </Accordion.Item>
                     <Accordion.Item eventKey="6">
                         <Accordion.Header>
-                            NO RECUERDO LA CLAVE ¿CÓMO RESETEO MI CLAVE?
+                            No recuerdo la clave ¿cómo reseteo mi clave?
                         </Accordion.Header>
                         <Accordion.Body>
                             Ingrese al evento para el cual adquirió entradas.
@@ -108,7 +108,7 @@ export const FAQPage = () => {
                     </Accordion.Item>
                     <Accordion.Item eventKey="7">
                         <Accordion.Header>
-                            TENGO UN COBRO DUPLICADO.
+                            Tengo un cobro duplicado
                         </Accordion.Header>
                         <Accordion.Body>
                             Lamentamos mucho lo sucedido, no se preocupe estamos
@@ -119,29 +119,15 @@ export const FAQPage = () => {
                             anticipadapp@gmail.com
                         </Accordion.Body>
                     </Accordion.Item>
-
                     <Accordion.Item eventKey="8">
                         <Accordion.Header>
-                            Qué debo presentar para ingresar al Evento?
+                            ¿Qué debo presentar para ingresar al Evento?
                         </Accordion.Header>
                         <Accordion.Body>
-                            Cuando ingreses al evento te van a pedir: Las
+                            Cuando ingreses al evento te van a pedir las
                             entradas descargadas ya sea en el celular en formato
-                            QR o el PDF impreso en formato papel.
-                        </Accordion.Body>
-                    </Accordion.Item>
-
-                    <Accordion.Item eventKey="9">
-                        <Accordion.Header>
-                            TENGO UN COBRO DUPLICADO.
-                        </Accordion.Header>
-                        <Accordion.Body>
-                            Lamentamos mucho lo sucedido, no se preocupe estamos
-                            para ayudarle. Tenga en cuenta que el valor de la
-                            entrada y el valor de los cargos por servicio
-                            figuran separados en el resumen o movimiento de
-                            tarjeta. Por favor escríbanos vía email a
-                            anticipadapp@gmail.com
+                            QR o el PDF impreso en formato papel. Además podría
+                            ser requerido el DNI según el establecimiento.
                         </Accordion.Body>
                     </Accordion.Item>
                 </Accordion>
