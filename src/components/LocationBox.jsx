@@ -78,7 +78,10 @@ export const LocationBox = () => {
                 className={`search-results-box ${showResults ? "" : "hidden"}`}
                 ref={resultsRef}
             >
-                {searchResults.map(result => {
+                {searchResults.map((result, index) => {
+                    {
+                        if (index > 10) return null;
+                    }
                     const text = `${result.name}, ${result.region}`;
                     return (
                         <div

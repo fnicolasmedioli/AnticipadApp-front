@@ -31,41 +31,38 @@ const regionsMap = {
     "06": "Buenos Aires",
 };
 
-/*
-function binarySearch(arr, s, low, high) {
-
-    while (low < high)
-    {
-        const mid = Math.floor((low+high)/2);
-
-        const toCompare = arr[mid].simplifiedName;
-
-        if (s == toCompare)
-            return mid;
-
-        if (s > toCompare)
-            low = mid + 1;
-        else
-            high = mid - 1;
-    }
-
-    return high;
-}
-*/
-
 export const GeoProvider = ({ children }) => {
     const [geoData, setGeoData] = useState({});
 
     const searchLocation = s => {
         const processedInput = simplifyString(s);
-        // const startSearchAt = binarySearch(geoData, processedInput, 0, geoData.length - 1);
+        const words = processedInput.split(" ");
+
         const results = [];
 
         for (let i = 0; i < geoData.length; i++) {
             const location = geoData[i];
-            if (location.simplifiedName.includes(processedInput))
-                results.push(location);
+
+            let matchCount = 0;
+
+            for (const word of words)
+                if (location.nameWords.includes(word)) matchCount++;
+
+            if (matchCount) {
+                results.push({
+                    ...location,
+                    matchCount,
+                    nameWords: location.nameWords.length,
+                });
+            }
         }
+
+        results.sort((a, b) => {
+            if (a.matchCount > b.matchCount) return -1;
+            if (b.matchCount < b.matchCount) return 1;
+            if (a.nameWords < b.nameWords) return -1;
+            return 1;
+        });
 
         return results;
     };
@@ -80,6 +77,7 @@ export const GeoProvider = ({ children }) => {
                 simplifiedName,
                 id: location[1],
                 region: regionsMap[location[2]],
+                nameWords: simplifiedName.split(" "),
             });
         }
 
