@@ -1,6 +1,6 @@
 import { useContext, useState, useEffect } from "react";
 
-import geoDataJSON from "/public/data/geoData.json";
+import geoDataJSON from "../data/geoData.json";
 import { GeoContext } from ".";
 import { simplifyString } from "../helpers";
 
