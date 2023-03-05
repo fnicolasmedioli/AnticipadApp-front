@@ -7,3 +7,4 @@ export * from "./IndexPage";
 export * from "./LoginPage";
 export * from "./PaymentMethodsPage";
 export * from "./SignupPage";
+export * from "./MyAccountPage";

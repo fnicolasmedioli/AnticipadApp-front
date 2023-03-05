@@ -10,6 +10,7 @@ import {
     FindTicketPage,
     SignupPage,
     ForgotPasswordPage,
+    MyAccountPage,
 } from "./pages";
 
 export const MainRouter = () => {
@@ -23,6 +24,7 @@ export const MainRouter = () => {
             <Route path="/metodos-de-pago" element={<PaymentMethodsPage />} />
             <Route path="/encuentra-tu-ticket" element={<FindTicketPage />} />
             <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+            <Route path="/mi-cuenta" element={<MyAccountPage />} />
             <Route path="/*" element={<Error404 />} />
         </Routes>
     );

@@ -5,6 +5,7 @@ import "animate.css";
 
 import "./style/global-style.scss";
 import "./style/auth-style.scss";
+import "./style/my-account.scss";
 import { MainRouter } from "./Router";
 import { UserProvider, GeoProvider } from "./context";
 

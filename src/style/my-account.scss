@@ -1,0 +1,27 @@
+.my-account-page {
+    color: white;
+    position: relative;
+    top: 3rem;
+}
+
+.my-account-page > div {
+}
+
+.my-account-page .section-box {
+    padding: 2rem;
+}
+
+.my-account-page .section-box .title {
+    color: white;
+}
+
+.my-account-page .section-box input {
+    margin-top: 10px;
+    background: #d5d5d5;
+    cursor: default;
+}
+.my-account-page .section-box input:focus {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid #ced4da;
+}
