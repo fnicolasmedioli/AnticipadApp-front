@@ -11,6 +11,8 @@ import {
     SignupPage,
     ForgotPasswordPage,
     MyAccountPage,
+    CreateEventPage,
+    LogoutPage,
 } from "./pages";
 
 export const MainRouter = () => {
@@ -25,6 +27,8 @@ export const MainRouter = () => {
             <Route path="/encuentra-tu-ticket" element={<FindTicketPage />} />
             <Route path="/forgot-password" element={<ForgotPasswordPage />} />
             <Route path="/mi-cuenta" element={<MyAccountPage />} />
+            <Route path="/crear-evento" element={<CreateEventPage />} />
+            <Route path="/logout" element={<LogoutPage />} />
             <Route path="/*" element={<Error404 />} />
         </Routes>
     );

@@ -1,14 +1,15 @@
 import Container from "react-bootstrap/Container";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link as RouterLink, NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons";
+import { useContext } from "react";
 
+import { UserContext } from "../context";
 import { LocationBox } from ".";
+import { LoggedHeader } from "./logged";
 
 function animateOnClick(e, animationName) {
     const animatedItemClass = "animate__animated";
@@ -30,6 +31,9 @@ function activeToggler({ isActive }) {
 }
 
 export const GlobalHeader = () => {
+    const { userData } = useContext(UserContext);
+    if (userData.logged) return <LoggedHeader />;
+
     return (
         <header>
             <Container fluid>
@@ -50,7 +54,6 @@ export const GlobalHeader = () => {
                         </Nav>
 
                         <Nav className="ms-auto right-nav-menu" bg="dark">
-                            {/*<NavLink to="/create" className={p => "nav-link"+activeToggler(p)}>Crear un evento</NavLink>*/}
                             <NavLink
                                 to="/login"
                                 className={p => "nav-link" + activeToggler(p)}

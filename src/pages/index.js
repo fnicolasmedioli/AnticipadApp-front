@@ -8,3 +8,5 @@ export * from "./LoginPage";
 export * from "./PaymentMethodsPage";
 export * from "./SignupPage";
 export * from "./MyAccountPage";
+export * from "./CreateEventPage";
+export * from "./LogoutPage";

@@ -2,9 +2,12 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 import { UserContext } from ".";
+import Cookies from "js-cookie";
 
 export const UserProvider = ({ children }) => {
-    const [userData, setUserData] = useState({});
+    const [userData, setUserData] = useState({
+        logged: Cookies.get("logged"),
+    });
 
     useEffect(() => {
         axios
